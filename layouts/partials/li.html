@@ -1,9 +1,11 @@
-<a class="text-center border" href="{{ .url }}">
-  <div>
-    <div class="mt:12 f:14 f:fade-60">
+<a
+  class="text-center block border-2 mt-11 max-w-[70vw] my-0 mx-auto rounded"
+  href="{{ .url }}">
+  <div class="flex items-center justify-center py-4">
+    <div class="flex justify-center flex-col">
       <strong> {{ .title }} </strong>
       <time>{{ .subTitle }}</time>
     </div>
-    <i class="fa-solid fa-chevron-right"></i>
+    <i class="fa-solid fa-chevron-right ml-4"></i>
   </div>
 </a>
