@@ -21,6 +21,13 @@ pre {
   margin: 32px 0;
 }
 
+p {
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 28px;
+  font-size: 18px;
+}
+
 li {
   margin-left: 36px;
 }
@@ -54,14 +61,14 @@ p img {
   border-radius: 15px;
 }
 
-pre{
+pre {
   padding: 15px;
   border-radius: 5px;
   max-width: 800px;
   margin: 0 auto;
 }
 
-.highlight{
+.highlight {
   margin-top: 25px;
 }
 

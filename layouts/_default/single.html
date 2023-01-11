@@ -1,9 +1,7 @@
 {{ define "main" }}
-<article class="pb-12">
-    <h2 class="text-center my-10 text-6xl">{{ .Title }}</h2>
+<article class="pb-12 w-4/5 mx-auto">
+  <h2 class="text-center my-10 text-6xl">{{ .Title }}</h2>
 
-    <main class="max-w-7xl my-0 mx-auto px-2 sm:px-4 py-2.5">
-        {{ .Content }}
-    </main>
+  <main class="max-w-7xl mx-auto px-2 sm:px-4 py-2.5">{{ .Content }}</main>
 </article>
 {{ end }}
