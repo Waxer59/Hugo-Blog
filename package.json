@@ -7,19 +7,30 @@
     "build": "hugo --minify",
     "dev": "hugo server -D",
     "tailwind:build": "npx tailwindcss -i ./main.css -o ./assets/styles/tyle.css",
-    "tailwind:watch": "npx tailwindcss -i ./main.css -o ./assets/styles/style.css --watch"
+    "tailwind:watch": "npx tailwindcss -i ./main.css -o ./assets/styles/style.css --watch",
+    "lint": "eslint \"*.{js,hmtl,md}\" --fix"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "eslint": "^8.31.0",
+    "eslint": "^8.0.1",
+    "eslint-config-prettier": "^8.6.0",
+    "eslint-config-standard": "^17.0.0",
+    "eslint-plugin-import": "^2.25.2",
+    "eslint-plugin-n": "^15.0.0",
+    "eslint-plugin-promise": "^6.0.0",
     "husky": "^8.0.3",
     "lint-staged": "^13.1.0",
     "pre-commit": "^1.2.2",
+    "prettier": "^2.8.2",
     "tailwindcss": "^3.2.4"
   },
   "dependencies": {
     "flowbite": "^1.6.1"
+  },
+  "lint-staged": {
+    "*.{js,html,md}": "eslint . --fix",
+    "*.{js,html,md,css}": "prettier --write"
   }
 }
