@@ -21,6 +21,10 @@ pre {
   margin: 32px 0;
 }
 
+pre {
+  overflow-x: scroll;
+}
+
 p {
   max-width: 800px;
   margin: 0 auto;
