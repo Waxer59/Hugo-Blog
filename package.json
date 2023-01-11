@@ -1,0 +1,21 @@
+{
+  "name": "wadev-blog",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "hugo --minify",
+    "dev": "hugo server -D",
+    "tailwind:build": "npx tailwindcss -i ./main.css -o ./assets/style.css",
+    "tailwind:watch": "npx tailwindcss -i ./main.css -o ./assets/style.css --watch"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "tailwindcss": "^3.2.4"
+  },
+  "dependencies": {
+    "flowbite": "^1.6.1"
+  }
+}
