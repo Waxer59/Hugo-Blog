@@ -1,4 +1,4 @@
-baseURL = 'http://example.org/'
+baseURL = 'https://wadev-blog.netlify.app/'
 languageCode = 'en-us'
 efaultContentLanguage = "en"
 title = 'Wadev - Blog'
