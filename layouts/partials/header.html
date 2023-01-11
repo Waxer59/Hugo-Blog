@@ -1,9 +1,9 @@
-<nav class="bg-white border-gray-200 px-2 sm:px-4 py-2.5 dark:bg-gray-900 border-b">
+<nav class="bg-white border-gray-200 px-2 sm:px-4 py-2.5 dark:bg-gray-900 border-b transition duration-500 ease">
     <div class="container flex flex-wrap items-center justify-between mx-auto">
-        <a href="#" class="flex items-center">
-            <img src="/images/wadevIcon.png" class="h-6 mr-3 sm:h-9" alt="Wadev logo" />
-            <span class="self-center text-xl font-regular whitespace-nowrap dark:text-white">Wa<span
-                    class="font-semibold">dev</span></span>
+        <a href="http://localhost:1313" class="flex items-center">
+            <img src="/images/wadevIcon.png" class="h-6 mr-3 dark:invert sm:h-9" alt="Wadev logo" />
+            <span
+                class="self-center text-xl font-regular whitespace-nowrap dark:text-white">Wa<strong>dev</strong></span>
         </a>
         <div class="flex md:order-2 gap-x-5">
             <button id="theme-toggle" type="button"
@@ -45,7 +45,7 @@
                     placeholder="Search...">
             </div>
         </div>
-        <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-search">
+        <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1 tr" id="navbar-search">
             <div class="relative mt-3 md:hidden">
                 <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
                     <svg class="w-5 h-5 text-gray-500" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20"
@@ -73,10 +73,6 @@
     } else {
         document.documentElement.classList.remove("dark");
     }
-
-</script>
-
-<script defer>
     let themeToggleDarkIcon = document.getElementById('theme-toggle-dark-icon');
     let themeToggleLightIcon = document.getElementById('theme-toggle-light-icon');
 

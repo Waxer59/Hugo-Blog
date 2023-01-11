@@ -4,23 +4,44 @@ date: '2022-07-26'
 draft: false
 ---
 
-Written in Go, Hugo is an open source static site generator available under the Apache Licence 2.0. Hugo supports TOML, YAML and JSON data file types, Markdown and HTML content files and uses shortcodes to add rich content. Other notable features are taxonomies, multilingual mode, image processing, custom output formats, HTML/CSS/JS minification and support for Sass SCSS workflows.
+# h1
+## h2
+### h3
+#### h4
+##### h5
+###### h6
 
-Hugo makes use of a variety of open source projects including:
 
-https://github.com/yuin/goldmark
-https://github.com/alecthomas/chroma
-https://github.com/muesli/smartcrop
-https://github.com/spf13/cobra
-https://github.com/spf13/viper
-Hugo is ideal for blogs, corporate websites, creative portfolios, online magazines, single page applications or even a website with thousands of pages.
+This is a text **Bold** __Bold2__ *Italic* ~~stri­ket­hro­ugh~~
 
-Hugo is for people who want to hand code their own website without worrying about setting up complicated runtimes, dependencies and databases.
+* Hello
+* World
+* Foo
+* Bar
+* * Bar
 
-Websites built with Hugo are extremely fast, secure and can be deployed anywhere including, AWS, GitHub Pages, Heroku, Netlify and any other hosting provider.
+1. Hello
+2. World
+3. Foo
+4. Bar
 
-Learn more and contribute on GitHub.
+![Image](https://images.unsplash.com/photo-1673351102028-39c04f6dcdf7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwyfHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=500&q=60)
 
-````
-console.log("hi")
-````
+
+---
+***
+___
+
+[link](https://google.com)
+
+![Image](https://images.unsplash.com/photo-1571171637578-41bc2dd41cd2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8cHJvZ3JhbWluZ3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60)
+```jsx
+console.log("Hello World")
+```
+```bash
+echo
+```
+> Important !
+> Keep in mind
+> that
+> ...

@@ -3,7 +3,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ if not .IsHome }}{{ .Title }} - {{ end }}{{ site.Title }}</title>
-    {{ $styles := resources.Get "style.css" }}
+
+    {{ $styles := resources.Get "styles/style.css" }}
     <link rel="stylesheet" href="{{ $styles.RelPermalink }}">
+
+    {{ $articleStyles := resources.Get "styles/articleStyles.css" }}
+    <link rel="stylesheet" href="{{ $articleStyles.RelPermalink }}">
+
     <link rel="icon" type="image/x-icon" href="/favicon/favicon.ico">
+    <script src="https://unpkg.com/flowbite@1.6.1/dist/flowbite.min.js"></script>
 </head>

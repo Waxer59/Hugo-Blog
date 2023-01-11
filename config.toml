@@ -2,8 +2,13 @@ baseURL = 'http://example.org/'
 languageCode = 'en-us'
 efaultContentLanguage = "en"
 title = 'Wadev - Blog'
+
 [permalinks]
   posts = "/:filename/"
+
 [params]
   author = "Wadev"
   description = "Hi! this is my blog"
+
+[markup.goldmark.renderer]
+unsafe= true

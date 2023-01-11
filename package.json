@@ -6,8 +6,8 @@
   "scripts": {
     "build": "hugo --minify",
     "dev": "hugo server -D",
-    "tailwind:build": "npx tailwindcss -i ./main.css -o ./assets/style.css",
-    "tailwind:watch": "npx tailwindcss -i ./main.css -o ./assets/style.css --watch"
+    "tailwind:build": "npx tailwindcss -i ./main.css -o ./assets/styles/tyle.css",
+    "tailwind:watch": "npx tailwindcss -i ./main.css -o ./assets/styles/style.css --watch"
   },
   "keywords": [],
   "author": "",

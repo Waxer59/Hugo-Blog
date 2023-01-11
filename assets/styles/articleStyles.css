@@ -1,0 +1,70 @@
+html,
+body {
+  height: 100vh;
+}
+
+hr {
+  margin: 15px 0;
+}
+
+blockquote {
+  background-color: #fff6bd;
+  border-radius: 5px;
+}
+blockquote p {
+  color: black;
+  padding: 25px;
+}
+
+p,
+pre {
+  margin: 32px 0;
+}
+
+li {
+  margin-left: 36px;
+}
+
+h1 {
+  font-size: 40px;
+}
+
+h2 {
+  font-size: 32px;
+}
+
+h3 {
+  font-size: 24px;
+}
+
+h4 {
+  font-size: 20px;
+}
+
+h5 {
+  font-size: 16px;
+}
+
+h6 {
+  font-size: 14px;
+}
+
+p img {
+  margin: 0 auto;
+  border-radius: 15px;
+}
+
+pre{
+  padding: 15px;
+  border-radius: 5px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.highlight{
+  margin-top: 25px;
+}
+
+code {
+  height: 0;
+}
