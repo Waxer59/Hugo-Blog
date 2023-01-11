@@ -1,15 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
-{{ partial "head.html" . }}
+  {{ partial "head.html" . }}
 
-<body>
+  <body
+    class="bg-secondary-color dark:secondary-color transition duration-500 ease dark:text-white">
     <div class="min-h-full relative">
-        {{ partial "header.html" . }}
-        <div class="pb-12">
-            {{- block "main" . }}{{- end }}
-        </div>
-        {{ partial "footer.html" . }}
+      {{ partial "header.html" . }}
+      <div class="pb-12">{{- block "main" . }}{{- end }}</div>
+      {{ partial "footer.html" . }}
     </div>
-</body>
-
+  </body>
 </html>

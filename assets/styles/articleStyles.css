@@ -1,3 +1,13 @@
+html:root {
+  --primary-color: #d9d9d9;
+  --secondary-color: #e8e8e8;
+}
+
+html.dark:root {
+  --primary-color: #1c1c1c;
+  --secondary-color: #2c2c2c;
+}
+
 html,
 body {
   height: 100vh;
