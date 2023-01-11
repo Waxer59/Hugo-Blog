@@ -8,16 +8,18 @@
     "dev": "hugo server -D",
     "tailwind:build": "npx tailwindcss -i ./main.css -o ./assets/styles/tyle.css",
     "tailwind:watch": "npx tailwindcss -i ./main.css -o ./assets/styles/style.css --watch",
-    "lint": "eslint \"*.{js,hmtl,md}\" --fix"
+    "lint": "eslint \"*.{js,hmtl,md}\" --fix",
+    "format": "prettier --write \"./**/*.{js,md,html,css}\""
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "eslint": "^8.0.1",
+    "eslint": "^8.31.0",
     "eslint-config-prettier": "^8.6.0",
     "eslint-config-standard": "^17.0.0",
     "eslint-plugin-import": "^2.25.2",
+    "eslint-plugin-markdown": "^3.0.0",
     "eslint-plugin-n": "^15.0.0",
     "eslint-plugin-promise": "^6.0.0",
     "husky": "^8.0.3",
@@ -30,7 +32,7 @@
     "flowbite": "^1.6.1"
   },
   "lint-staged": {
-    "*.{js,html,md}": "eslint . --fix",
+    "*.{js,md}": "eslint . --fix",
     "*.{js,html,md,css}": "prettier --write"
   }
 }
