@@ -1119,14 +1119,6 @@ input:checked + .toggle-bg {
   margin-top: 0.75rem;
 }
 
-.mt-11 {
-  margin-top: 2.75rem;
-}
-
-.ml-4 {
-  margin-left: 1rem;
-}
-
 .mb-8 {
   margin-bottom: 2rem;
 }
@@ -1135,8 +1127,12 @@ input:checked + .toggle-bg {
   margin-bottom: 0.5rem;
 }
 
-.mt-7 {
-  margin-top: 1.75rem;
+.mt-11 {
+  margin-top: 2.75rem;
+}
+
+.ml-4 {
+  margin-left: 1rem;
 }
 
 .mt-2 {
@@ -1199,12 +1195,12 @@ input:checked + .toggle-bg {
   width: 1.25rem;
 }
 
-.w-12 {
-  width: 3rem;
-}
-
 .w-4\/5 {
   width: 80%;
+}
+
+.w-12 {
+  width: 3rem;
 }
 
 .w-4 {
@@ -1219,12 +1215,12 @@ input:checked + .toggle-bg {
   width: 16rem;
 }
 
-.max-w-\[70vw\] {
-  max-width: 70vw;
-}
-
 .max-w-7xl {
   max-width: 80rem;
+}
+
+.max-w-\[70vw\] {
+  max-width: 70vw;
 }
 
 .flex-1 {
@@ -1669,10 +1665,48 @@ input:checked + .toggle-bg {
   transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
 }
 
+.hover\:translate-x-px:hover {
+  --tw-translate-x: 1px;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.hover\:translate-x-10:hover {
+  --tw-translate-x: 2.5rem;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.hover\:translate-x-8:hover {
+  --tw-translate-x: 2rem;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.hover\:translate-x-5:hover {
+  --tw-translate-x: 1.25rem;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
 .hover\:scale-125:hover {
   --tw-scale-x: 1.25;
   --tw-scale-y: 1.25;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+@keyframes float {
+  0% {
+    transform: translatey(0px);
+  }
+
+  50% {
+    transform: translatey(-20px);
+  }
+
+  100% {
+    transform: translatey(0px);
+  }
+}
+
+.hover\:animate-float:hover {
+  animation: float 6s ease-in-out infinite;;
 }
 
 .hover\:border-gray-300:hover {

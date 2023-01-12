@@ -12,7 +12,7 @@ async function fetchData(url) {
 
 function mapArticlePost({ url, title, date, content, readTime, technology }) {
   return `<a
-    class="text-center block bg-primary-color mt-11 max-w-[70vw] mx-auto rounded-lg"
+    class="text-center block bg-primary-color mt-11 max-w-[70vw] mx-auto rounded-lg transition duration-500 ease hover:translate-x-5"
     href="${url}">
     <div class="flex items-center justify-between py-4 px-4">
       <img
