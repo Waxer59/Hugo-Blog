@@ -1348,6 +1348,10 @@ input:checked + .toggle-bg {
   margin-left: calc(0.5rem * calc(1 - var(--tw-space-x-reverse)));
 }
 
+.self-end {
+  align-self: flex-end;
+}
+
 .self-center {
   align-self: center;
 }
@@ -1536,6 +1540,14 @@ input:checked + .toggle-bg {
 
 .pt-4 {
   padding-top: 1rem;
+}
+
+.pl-4 {
+  padding-left: 1rem;
+}
+
+.pl-5 {
+  padding-left: 1.25rem;
 }
 
 .text-center {
@@ -1921,6 +1933,10 @@ input:checked + .toggle-bg {
 
   .sm\:flex-row {
     flex-direction: row;
+  }
+
+  .sm\:gap-0 {
+    gap: 0px;
   }
 
   .sm\:px-4 {
