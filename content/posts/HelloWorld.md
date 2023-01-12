@@ -1,6 +1,7 @@
 ---
 title: 'Hello World!'
 date: 2023-01-12
+readTime: '1 minute'
 draft: false
 ---
 

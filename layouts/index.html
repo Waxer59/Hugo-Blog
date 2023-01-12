@@ -2,7 +2,7 @@
 <main>
   <h2 class="text-center mt-8">Posts</h2>
   {{- range where site.RegularPages "Type" "in" site.Params.mainSections -}} {{-
-  partial "li.html" ( dict "url" .Permalink "title" .Title "subTitle"
-  (.Date.Format "Mon Jan 2 2006") ) -}} {{- end -}}
+  partial "li.html" ( dict "url" .Permalink "title" .Title "readTime"
+  .Params.readTime "subTitle" (.Date.Format "Mon Jan 2 2006")) -}} {{- end -}}
 </main>
 {{ end }}
