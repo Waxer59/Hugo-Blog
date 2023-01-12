@@ -8,7 +8,7 @@ title = 'Wadev - Blog'
 
 [params]
   author = "Wadev"
-  description = "Hi! this is my blog"
+  description = "Hi! im Wadev and this is my blog"
   
 [markup.goldmark.renderer]
 unsafe= true
