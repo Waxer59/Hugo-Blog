@@ -2,7 +2,7 @@
 <html lang="en">
   {{ partial "head.html" . }}
 
-  <body class="bg-secondary-color dark:secondary-color dark:text-white">
+  <body class="dark:secondary-color dark:text-white bg-secondary-color">
     <div class="min-h-full relative">
       {{ partial "header.html" . }}
       <div class="pb-12">{{- block "main" . }}{{- end }}</div>

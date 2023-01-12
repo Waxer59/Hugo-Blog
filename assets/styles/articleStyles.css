@@ -4,8 +4,8 @@ html:root {
 }
 
 html.dark:root {
-  --primary-color: #1c1c1c;
-  --secondary-color: #2c2c2c;
+  --primary-color: #1c1c1c !important;
+  --secondary-color: #2c2c2c !important;
 }
 
 html,
