@@ -32,14 +32,16 @@ pre {
 }
 
 pre {
-  overflow: auto;
+  overflow: auto !important;
 }
 
 p {
-  max-width: 800px;
-  margin: 0 auto;
-  line-height: 28px;
-  font-size: 18px;
+  max-width: 800px !important;
+  margin: 0 auto !important;
+  line-height: 28px !important;
+  font-size: 18px !important;
+  margin-bottom: 32px !important;
+  word-break: break-word !important;
 }
 
 li {
@@ -47,33 +49,33 @@ li {
 }
 
 h1 {
-  font-size: 40px;
-  line-height: 50px;
+  font-size: 40px !important;
+  line-height: 50px !important;
 }
 
 h2 {
-  font-size: 32px;
-  line-height: 42px;
+  font-size: 32px !important;
+  line-height: 42px !important;
 }
 
 h3 {
-  font-size: 24px;
-  line-height: 34px;
+  font-size: 24px !important;
+  line-height: 34px !important;
 }
 
 h4 {
-  font-size: 20px;
-  line-height: 22px;
+  font-size: 20px !important;
+  line-height: 22px !important;
 }
 
 h5 {
-  font-size: 16px;
-  line-height: 26px;
+  font-size: 16px !important;
+  line-height: 26px !important;
 }
 
 h6 {
-  font-size: 14px;
-  line-height: 26px;
+  font-size: 14px !important;
+  line-height: 26px !important;
 }
 
 p img {
