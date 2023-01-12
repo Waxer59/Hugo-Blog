@@ -10,6 +10,6 @@ Hello and welcome to my personal blog, here I will post articles about programmi
 
 Mainly will talk about the technologies within the javascript environment either frontend and backend, but also will cover some topics of other languages, I hope you like it and **happy coding!**
 
-```js
+```javascript
 console.log('Hello World!');
 ```
