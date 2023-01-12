@@ -1,0 +1,8 @@
+{{- $result := slice -}}
+
+{{- range (where .Site.RegularPages "Section" "!=" "") -}}
+    {{- $data := dict "url" .Permalink "title" .Title "date" (.Date.Format "Mon Jan 2 2006") "readTime" .Params.readTime "technology" .Params.technology "content"  (.Content | plainify) -}}
+    {{- $result = $result | append $data -}}
+{{- end -}}
+
+{{ jsonify $result }}

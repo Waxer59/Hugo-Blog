@@ -1,8 +1,7 @@
 {{ define "main" }}
 <main>
   <h2 class="text-center mt-8">Posts</h2>
-  {{- range where site.RegularPages "Type" "in" site.Params.mainSections -}} {{-
-  partial "li.html" ( dict "url" .Permalink "title" .Title "readTime"
-  .Params.readTime "technology" .Params.technology "subTitle" (.Date.Format "Mon Jan 2 2006")) -}} {{- end -}}
+  <div id="pageContent">
+  </div>
 </main>
 {{ end }}
