@@ -31,7 +31,7 @@
     "flowbite": "^1.6.1"
   },
   "lint-staged": {
-    "*.{js}": "eslint . --fix",
+    "*.js": "eslint . --fix",
     "*.{js,html,md,css}": "prettier --write"
   }
 }
