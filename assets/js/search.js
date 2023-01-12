@@ -1,4 +1,4 @@
-const searchElement = document.querySelector('#search-navbar');
+const searchElement = document.querySelectorAll('#search-navbar');
 const container = document.querySelector('#pageContent');
 
 const URLS = {
@@ -45,28 +45,31 @@ async function displayAllPosts() {
 }
 
 if (
-  searchElement.value.trim() === '' &&
+  searchElement[0].value.trim() === '' &&
+  searchElement[1].value.trim() === '' &&
   window.location.href === `${window.location.origin}/`
 ) {
   displayAllPosts();
 }
 
-searchElement.addEventListener('input', async () => {
-  if (window.location.href === `${window.location.origin}/`) {
-    let content = await fetchData(URLS.GET_POSTS_URL);
-    content = content.filter((el) =>
-      el.title.toLowerCase().includes(searchElement.value.toLowerCase())
-    );
-    container.innerHTML = '';
-    content.forEach(({ url, title, date, content, readTime, technology }) => {
-      container.innerHTML += mapArticlePost({
-        url,
-        title,
-        date,
-        content,
-        readTime,
-        technology
+searchElement.forEach((searchInput) => {
+  searchInput.addEventListener('input', async () => {
+    if (window.location.href === `${window.location.origin}/`) {
+      let content = await fetchData(URLS.GET_POSTS_URL);
+      content = content.filter((el) =>
+        el.title.toLowerCase().includes(searchInput.value.toLowerCase())
+      );
+      container.innerHTML = '';
+      content.forEach(({ url, title, date, content, readTime, technology }) => {
+        container.innerHTML += mapArticlePost({
+          url,
+          title,
+          date,
+          content,
+          readTime,
+          technology
+        });
       });
-    });
-  }
+    }
+  });
 });
