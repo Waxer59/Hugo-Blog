@@ -1,7 +1,21 @@
 {{ define "main" }}
 <article class="pb-12 w-4/5 mx-auto">
-  <h2 class="text-center my-10 text-6xl">{{ .Title }}</h2>
+  <header class="flex items-center justify-center flex-col mb-8">
+    <h2 class="text-center my-10 text-6xl mb-2">{{ .Title }}</h2>
+    <span class="opacity-50">{{.Params.readTime}}</span>
+  </header>
 
-  <main class="max-w-7xl mx-auto px-2 sm:px-4 py-2.5">{{ .Content }}</main>
+  <main class="max-w-7xl mx-auto px-2 sm:px-4 py-2.5">
+    {{ .Content }}
+    <footer class="mt-6 text-center opacity-50">
+      <span></span>
+      <a
+        href="https://github.com/Waxer59/Wadev-Blog/tree/main/content/posts/{{ .File.LogicalName }}"
+        target="_blank"
+        >Did you find a typo? edit the article &nbsp;<i
+          class="fa-brands fa-github"></i
+      ></a>
+    </footer>
+  </main>
 </article>
 {{ end }}
