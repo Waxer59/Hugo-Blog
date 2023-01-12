@@ -1,4 +1,4 @@
-const searchElement = document.querySelectorAll('#search-navbar');
+const searchElement = document.querySelectorAll('.search-navbar');
 const container = document.querySelector('#pageContent');
 
 const URLS = {
