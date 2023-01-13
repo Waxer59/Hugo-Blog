@@ -15,7 +15,6 @@ h4,
 h5,
 h6 {
   text-align: center;
-  margin-bottom: 32px;
 }
 
 html,
@@ -23,14 +22,9 @@ body {
   height: 100vh;
 }
 
-hr {
-  margin: 15px 0;
-}
-
 blockquote {
   background-color: var(--primary-color);
   border-radius: 5px;
-  margin-top: 32px;
   max-width: 800px;
   margin: 0 auto;
 }
@@ -38,17 +32,10 @@ blockquote p {
   padding: 25px;
 }
 
-p,
-pre {
-  margin: 32px 0;
-}
-
 p {
   max-width: 800px !important;
-  margin: 0 auto !important;
   line-height: 28px !important;
   font-size: 18px !important;
-  margin-bottom: 32px !important;
   word-break: break-word !important;
 }
 
@@ -101,7 +88,7 @@ pre {
 }
 
 .highlight {
-  margin-top: 25px;
+  width: 100%;
   position: relative;
   max-width: 800px;
   margin: 0 auto;
@@ -188,4 +175,10 @@ code::before {
 
 ::-webkit-scrollbar-thumb:hover {
   background: #6c6c6c;
+}
+
+main p a {
+  opacity: 0.65;
+  max-width: 800px !important;
+  text-decoration: underline;
 }
