@@ -48,8 +48,8 @@ async function displayAllPosts() {
 }
 
 if (
-  searchElement[0].value.trim() === '' &&
-  searchElement[1].value.trim() === '' &&
+  searchElement[0]?.value.trim() === '' &&
+  searchElement[1]?.value.trim() === '' &&
   window.location.href === `${window.location.origin}/`
 ) {
   displayAllPosts();
@@ -60,7 +60,7 @@ searchElement.forEach((searchInput) => {
     if (window.location.href === `${window.location.origin}/`) {
       let content = await fetchData(URLS.GET_POSTS_URL);
       content = content.filter((el) =>
-        el.title.toLowerCase().includes(searchInput.value.toLowerCase())
+        el.title.toLowerCase().includes(searchInput?.value.toLowerCase())
       );
       container.innerHTML = '';
       content.forEach(({ url, title, date, content, readTime, technology }) => {
