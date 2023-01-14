@@ -3,9 +3,6 @@ languageCode = 'en-us'
 efaultContentLanguage = "en"
 title = 'Wadev - Blog'
 
-[permalinks]
-  posts = "/:filename/"
-
 [params]
   author = "Wadev"
   description = "Hi! im Wadev and this is my blog"
@@ -15,3 +12,13 @@ unsafe= true
 
 [outputs]
     home = [ "HTML", "JSON", "RSS"]
+
+[languages]
+  [languages.en]
+    baseURL = 'https://wadev-blog.netlify.app/'
+    contentDir = 'content'
+    languageName = 'EN'
+  [languages.es]
+    baseURL = 'https://wadev-blog.netlify.app/es'
+    contentDir = 'content/es'
+    languageName = 'ES'

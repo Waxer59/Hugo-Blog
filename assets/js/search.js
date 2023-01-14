@@ -34,6 +34,7 @@ function mapArticlePost({ url, title, date, content, readTime, technology }) {
 
 async function displayAllPosts() {
   const content = await fetchData(URLS.GET_POSTS_URL);
+  console.log(content);
   container.innerHTML = '';
   content.forEach(({ url, title, date, content, readTime, technology }) => {
     container.innerHTML += mapArticlePost({
@@ -59,6 +60,7 @@ searchElement.forEach((searchInput) => {
   searchInput.addEventListener('input', async () => {
     if (window.location.href === `${window.location.origin}/`) {
       let content = await fetchData(URLS.GET_POSTS_URL);
+      //! CHANGE
       content = content.filter((el) =>
         el.title.toLowerCase().includes(searchInput?.value.toLowerCase())
       );
