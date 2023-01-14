@@ -19,6 +19,8 @@ function mapArticlePost({ url, title, date, content, readTime, technology }) {
       <img
         src="${URLS.BASE_URL}/icons/${technology}.png"
         alt="${technology} icon"
+        width="128"
+        height="128"
         class="w-12" 
       />
 
