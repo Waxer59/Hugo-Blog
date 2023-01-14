@@ -18,7 +18,7 @@ unsafe= true
     baseURL = 'https://deploy-preview-1--wadev-blog.netlify.app'
     contentDir = 'content'
     languageName = 'EN'
-  # [languages.es]
-  #   baseURL = 'https://deploy-preview-1--wadev-blog.netlify.app/es'
-  #   contentDir = 'content/es'
-  #   languageName = 'ES'
+  [languages.es]
+    baseURL = 'https://deploy-preview-1--wadev-blog.netlify.app?lang=es'
+    contentDir = 'content/es'
+    languageName = 'ES'
