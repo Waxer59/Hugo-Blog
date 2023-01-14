@@ -25,7 +25,7 @@
         clip-rule="evenodd"></path>
     </svg>
   </button>
-  {{ partial "languageSelector.html" . }} {{ if .Page.IsHome }} {{ partial
+  {{ if .Page.IsHome }} {{ partial "languageSelector.html" . }}{{ partial
   "searchInput/searchInput.html" . }} {{ end }}
 </div>
 {{ if .Page.IsHome }} {{ partial "searchInput/searchInputResponsive.html" . }}

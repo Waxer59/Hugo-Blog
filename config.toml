@@ -2,6 +2,7 @@ baseURL = 'https://deploy-preview-1--wadev-blog.netlify.app'
 languageCode = 'en-us'
 title = 'Wadev - Blog'
 defaultContentLanguageInSubdir = true
+defaultContentLanguage = "es"
 
 [params]
   author = "Wadev"

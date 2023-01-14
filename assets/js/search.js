@@ -2,7 +2,9 @@ const searchElement = document.querySelectorAll('.search-navbar');
 const container = document.querySelector('#pageContent');
 
 const URLS = {
-  GET_POSTS_URL: `${window.location.href}index.json`,
+  GET_POSTS_URL: `${
+    window.location.origin + window.location.pathname
+  }index.json`,
   BASE_URL: `${window.location.origin}`
 };
 
@@ -22,17 +24,17 @@ function mapArticlePost({ url, title, date, content, readTime, technology }) {
         width="128"
         height="128"
         class="w-12" 
-      />
-
+        />
+        
       <div class="flex justify-center flex-col">
         <strong> ${title} </strong>
           <time>${date}</time>
           <span class="opacity-50">${readTime}</span>
       </div>
-
+      
       <i class="fa-solid fa-chevron-right ml-4 pl-auto"></i>
-    </div>
-  </a>`;
+      </div>
+      </a>`;
 }
 
 async function displayAllPosts() {
@@ -50,10 +52,8 @@ async function displayAllPosts() {
   });
 }
 if (
-  (searchElement[0]?.value.trim() === '' &&
-    searchElement[1]?.value.trim() === '' &&
-    window.location.href === `${window.location.origin}/es/`) ||
-  window.location.href === `${window.location.origin}/en/`
+  searchElement[0]?.value.trim() === '' &&
+  searchElement[1]?.value.trim() === ''
 ) {
   displayAllPosts();
 }
