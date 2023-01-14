@@ -29,3 +29,7 @@ unsafe= true
     languageName = 'es'
     [languages.es.params]
       linkedin = 'https://wadev-blog.netlify.app/es'
+
+[markup]
+  [markup.highlight]
+    style = "onedark"
