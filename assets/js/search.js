@@ -17,7 +17,7 @@ function mapArticlePost({ url, title, date, content, readTime, technology }) {
   return `<a
     class="text-center block bg-primary-color mt-11 max-w-[70vw] mx-auto rounded-lg transition-transform duration-500 ease hover:translate-x-5"
     href="${url}">
-    <div class="flex flex-col gap-4 sm:gap-0 sm:flex-row justify-between items-center mx-auto py-4 px-4">
+    <div class="shadow-lg flex flex-col gap-4 sm:gap-0 sm:flex-row justify-between items-center mx-auto py-4 px-4">
       <img
         src="${URLS.BASE_URL}/icons/${technology}.png"
         alt="${technology} icon"
