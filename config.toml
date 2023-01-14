@@ -32,4 +32,5 @@ unsafe= true
 
 [markup]
   [markup.highlight]
+    noClasses=false
     style = "onedark"
