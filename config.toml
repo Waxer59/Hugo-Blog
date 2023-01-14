@@ -1,8 +1,9 @@
-baseURL = 'https://deploy-preview-1--wadev-blog.netlify.app'
+baseURL = '/'
 languageCode = 'en-us'
 title = 'Wadev - Blog'
 defaultContentLanguageInSubdir = true
 defaultContentLanguage = "es"
+enableRobotsTXT = true
 
 [params]
   author = "Wadev"

@@ -12,3 +12,9 @@ other = "Go back"
 
 [footerText]
 other = "Made by"
+
+[404PageTitle]
+other = "Page not found :-("
+
+[404PageText]
+other = "We couldn't find what you were looking for, but we have some wonderful items that we're sure you'll love. Sure you'll love, take a break and come back anytime."
