@@ -6,6 +6,9 @@ defaultContentLanguageInSubdir = true
 [params]
   author = "Wadev"
   description = "Hi! im Wadev and this is my blog"
+
+[permalinks]
+  posts = "/:filename/"
   
 [markup.goldmark.renderer]
 unsafe= true
