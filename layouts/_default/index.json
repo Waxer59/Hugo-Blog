@@ -1,7 +1,7 @@
 {{- $result := slice -}}
 
 {{- range (where .Site.RegularPages "Section" "!=" "") -}}
-    {{- $data := dict "url" .Permalink "title" .Title "date" (.Date.Format "Mon Jan 2 2006") "readTime" .Params.readTime "technology" .Params.technology "content"  (.Content | plainify) -}}
+    {{- $data := dict "url" .Permalink "title" .Title "date" (dict "day" .Date.Day "month" (i18n .Date.Month) "year" .Date.Year) "readTime" .Params.readTime "technology" .Params.technology "content"  (.Content | plainify) -}}
     {{- $result = $result | append $data -}}
 {{- end -}}
 
