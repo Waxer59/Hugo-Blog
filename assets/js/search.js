@@ -2,7 +2,8 @@ const searchElement = document.querySelectorAll('.search-navbar');
 const container = document.querySelector('#pageContent');
 
 const URLS = {
-  GET_POSTS_URL: `${window.location.origin}/index.json`
+  GET_POSTS_URL: `${window.location.href}index.json`,
+  BASE_URL: `${window.location.origin}`
 };
 
 async function fetchData(url) {
@@ -16,7 +17,7 @@ function mapArticlePost({ url, title, date, content, readTime, technology }) {
     href="${url}">
     <div class="flex flex-col gap-4 sm:gap-0 sm:flex-row justify-between items-center mx-auto py-4 px-4">
       <img
-        src="icons/${technology}.png"
+        src="${URLS.BASE_URL}/icons/${technology}.png"
         alt="${technology} icon"
         class="w-12" 
       />
@@ -34,7 +35,6 @@ function mapArticlePost({ url, title, date, content, readTime, technology }) {
 
 async function displayAllPosts() {
   const content = await fetchData(URLS.GET_POSTS_URL);
-  console.log(content);
   container.innerHTML = '';
   content.forEach(({ url, title, date, content, readTime, technology }) => {
     container.innerHTML += mapArticlePost({
@@ -47,11 +47,11 @@ async function displayAllPosts() {
     });
   });
 }
-
 if (
-  searchElement[0]?.value.trim() === '' &&
-  searchElement[1]?.value.trim() === '' &&
-  window.location.href === `${window.location.origin}/`
+  (searchElement[0]?.value.trim() === '' &&
+    searchElement[1]?.value.trim() === '' &&
+    window.location.href === `${window.location.origin}/es/`) ||
+  window.location.href === `${window.location.origin}/en/`
 ) {
   displayAllPosts();
 }
@@ -60,7 +60,6 @@ searchElement.forEach((searchInput) => {
   searchInput.addEventListener('input', async () => {
     if (window.location.href === `${window.location.origin}/`) {
       let content = await fetchData(URLS.GET_POSTS_URL);
-      //! CHANGE
       content = content.filter((el) =>
         el.title.toLowerCase().includes(searchInput?.value.toLowerCase())
       );
