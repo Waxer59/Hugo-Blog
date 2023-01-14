@@ -1,7 +1,7 @@
 ---
 title: 'Hello World!'
 date: 2023-01-12
-readTime: '1 minute'
+readTime: '1 minute to read'
 technology: 'javascript'
 draft: false
 ---

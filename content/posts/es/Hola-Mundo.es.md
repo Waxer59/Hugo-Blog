@@ -1,7 +1,7 @@
 ---
 title: 'Hola Mundo!'
 date: 2023-01-12
-readTime: '1 minuto'
+readTime: '1 minuto de lectura'
 technology: 'javascript'
 draft: false
 ---

@@ -25,7 +25,7 @@ function mapArticlePost({ url, title, date, content, readTime, technology }) {
       <div class="flex justify-center flex-col">
         <strong> ${title} </strong>
           <time>${date}</time>
-          <span class="opacity-50">${readTime} to read</span>
+          <span class="opacity-50">${readTime}</span>
       </div>
 
       <i class="fa-solid fa-chevron-right ml-4 pl-auto"></i>

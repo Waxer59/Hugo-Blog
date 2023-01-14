@@ -1,7 +1,7 @@
 ---
 title: 'var let o const'
 date: 2023-01-11
-readTime: 'X'
+readTime: 'X minutos de lectura'
 technology: 'javascript'
 draft: true
 ---
