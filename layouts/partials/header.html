@@ -1,7 +1,9 @@
 <nav
   class="bg-primary-color border-gray-200 px-6 py-4 sm sm:px-4 sm:py-2.5 dark:bg-primary-colorborder-b">
+  {{ $flexDirection := "flex-col" }} {{ if not .Page.IsHome }} {{ $flexDirection
+  = "flex-row" }} {{ end }}
   <div
-    class="container flex flex-nowrap flex-col sm:flex-row gap-4 sm:flex-row items-center justify-between mx-auto">
+    class="container flex {{ $flexDirection }} sm:flex-row gap-4 sm:flex-row items-center justify-between mx-auto">
     <a href="" id="backToHomeLogo" class="flex items-center">
       <img
         src="/images/wadevIcon.png"
