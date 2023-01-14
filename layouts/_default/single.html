@@ -2,14 +2,18 @@
 <article class="pb-12 w-4/5 mx-auto">
   <header class="flex items-center justify-between mb-8">
     <a
-      href="{{.Site.BaseURL}}"
+      href=""
+      id="backToHomeBtn"
       class="absolute hidden sm:block hover:-translate-x-5 transition-transform duration-500 ease"
-      ><i class="fa-solid fa-chevron-left"></i>&nbsp; Go back</a
+      ><i class="fa-solid fa-chevron-left"></i>&nbsp; {{ i18n "backButtonText" .
+      }}</a
     >
     <div class="flex flex-col mx-auto items-center">
       <h2 class="text-center my-10 text-6xl mb-2">{{ .Title }}</h2>
       <span class="opacity-50">{{.Params.readTime}}</span>
-      <span class="opacity-50">{{.Date.Format "Mon Jan 2 2006"}}</span>
+      <span class="opacity-50"
+        >{{.Date.Day}} {{i18n .Date.Month}} {{.Date.Year}}</span
+      >
     </div>
   </header>
 
@@ -20,10 +24,16 @@
       <a
         href="https://github.com/Waxer59/Wadev-Blog/tree/main/content/posts/{{ .File.LogicalName }}"
         target="_blank"
-        >Did you find a typo? edit the article &nbsp;<i
-          class="fa-brands fa-github"></i
+        >{{ i18n "editArticleText" . }} &nbsp;<i class="fa-brands fa-github"></i
       ></a>
     </footer>
   </main>
 </article>
+
+<script defer>
+  const backToHomeBtn = document.querySelector('#backToHomeBtn');
+  backToHomeBtn.href = `${window.location.origin}/${
+    window.location.pathname.split('/')[1]
+  }/`;
+</script>
 {{ end }}

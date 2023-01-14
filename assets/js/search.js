@@ -2,7 +2,10 @@ const searchElement = document.querySelectorAll('.search-navbar');
 const container = document.querySelector('#pageContent');
 
 const URLS = {
-  GET_POSTS_URL: `${window.location.origin}/index.json`
+  GET_POSTS_URL: `${
+    window.location.origin + window.location.pathname
+  }index.json`,
+  BASE_URL: `${window.location.origin}`
 };
 
 async function fetchData(url) {
@@ -16,20 +19,22 @@ function mapArticlePost({ url, title, date, content, readTime, technology }) {
     href="${url}">
     <div class="flex flex-col gap-4 sm:gap-0 sm:flex-row justify-between items-center mx-auto py-4 px-4">
       <img
-        src="icons/${technology}.png"
+        src="${URLS.BASE_URL}/icons/${technology}.png"
         alt="${technology} icon"
+        width="128"
+        height="128"
         class="w-12" 
-      />
-
+        />
+        
       <div class="flex justify-center flex-col">
         <strong> ${title} </strong>
-          <time>${date}</time>
-          <span class="opacity-50">${readTime} to read</span>
+          <time>${date.day} ${date.month} ${date.year}</time>
+          <span class="opacity-50">${readTime}</span>
       </div>
-
+      
       <i class="fa-solid fa-chevron-right ml-4 pl-auto"></i>
-    </div>
-  </a>`;
+      </div>
+      </a>`;
 }
 
 async function displayAllPosts() {
@@ -46,33 +51,29 @@ async function displayAllPosts() {
     });
   });
 }
-
 if (
   searchElement[0]?.value.trim() === '' &&
-  searchElement[1]?.value.trim() === '' &&
-  window.location.href === `${window.location.origin}/`
+  searchElement[1]?.value.trim() === ''
 ) {
   displayAllPosts();
 }
 
 searchElement.forEach((searchInput) => {
   searchInput.addEventListener('input', async () => {
-    if (window.location.href === `${window.location.origin}/`) {
-      let content = await fetchData(URLS.GET_POSTS_URL);
-      content = content.filter((el) =>
-        el.title.toLowerCase().includes(searchInput?.value.toLowerCase())
-      );
-      container.innerHTML = '';
-      content.forEach(({ url, title, date, content, readTime, technology }) => {
-        container.innerHTML += mapArticlePost({
-          url,
-          title,
-          date,
-          content,
-          readTime,
-          technology
-        });
+    let content = await fetchData(URLS.GET_POSTS_URL);
+    content = content.filter((el) =>
+      el.title.toLowerCase().includes(searchInput?.value.toLowerCase())
+    );
+    container.innerHTML = '';
+    content.forEach(({ url, title, date, content, readTime, technology }) => {
+      container.innerHTML += mapArticlePost({
+        url,
+        title,
+        date,
+        content,
+        readTime,
+        technology
       });
-    }
+    });
   });
 });

@@ -1,0 +1,68 @@
+[searchField]
+other = "Search"
+
+[postsTitle]
+other = "Posts"
+
+[editArticleText]
+other = "Did you find a typo? edit the article"
+
+[backButtonText]
+other = "Go back"
+
+[footerText]
+other = "Made by"
+
+[404PageTitle]
+other = "Page not found :-("
+
+[404PageText]
+other = "We couldn't find what you were looking for, but we have some wonderful items that we're sure you'll love. Sure you'll love, take a break and come back anytime."
+
+#* DATES
+[January]
+other= "January"
+
+[February]
+
+other= "February"
+
+[March]
+
+other= "March"
+
+[April]
+
+other= "April"
+
+[May]
+
+other= "May"
+
+[June]
+
+other= "June"
+
+[July]
+
+other= "July"
+
+[August]
+
+other= "August"
+
+[September]
+
+other= "September"
+
+[October]
+
+other= "October"
+
+[November]
+
+other= "November"
+
+[December]
+
+other= "December"

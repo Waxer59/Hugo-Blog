@@ -1,8 +1,19 @@
-{{ define "main" }}
-<div class=" px-2 sm:px-4 py-2.5 ">
-    <h1 class="text-center mt-6 text-6xl">404 </h1>
-    <p class="text-center mt-4">
-        We don't know what it is but everyone has one
-    </p>
-</div>
+{{ define "main"}}
+<main class="mt-8 max-w-[800px] mx-auto">
+  <a
+    href=""
+    id="backToHomeBtn"
+    class="absolute hidden sm:block hover:-translate-x-5 transition-transform duration-500 ease"
+    ><i class="fa-solid fa-chevron-left"></i>&nbsp; {{ i18n "backButtonText" .
+    }}</a
+  >
+  <h1>{{ i18n "404PageTitle" . }}</h1>
+  <p class="mt-8 text-center">{{ i18n "404PageText" . }}</p>
+</main>
+<script defer>
+  const backToHomeBtn = document.querySelector('#backToHomeBtn');
+  backToHomeBtn.href = `${window.location.origin}/${
+    window.location.pathname.split('/')[1]
+  }/`;
+</script>
 {{ end }}

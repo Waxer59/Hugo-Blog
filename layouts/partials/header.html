@@ -1,10 +1,10 @@
 <nav
   class="bg-primary-color border-gray-200 px-6 py-4 sm sm:px-4 sm:py-2.5 dark:bg-primary-colorborder-b">
-  {{ $flexDirection := "flex-col" }} {{ if not (eq .Page.Permalink
-  .Site.BaseURL) }} {{ $flexDirection = "flex-row" }} {{ end }}
+  {{ $flexDirection := "flex-col" }} {{ if not .Page.IsHome }} {{ $flexDirection
+  = "flex-row" }} {{ end }}
   <div
-    class="container flex flex-nowrap {{ $flexDirection }} gap-4 sm:flex-row items-center justify-between mx-auto">
-    <a href="{{.Site.BaseURL}}" class="flex items-center">
+    class="container flex {{ $flexDirection }} sm:flex-row gap-4 sm:flex-row items-center justify-between mx-auto">
+    <a href="" id="backToHomeLogo" class="flex items-center">
       <img
         src="/images/wadevIcon.png"
         class="h-6 mr-3 dark:invert sm:h-9 hover:scale-125 transition-transform duration-500 ease"
@@ -17,3 +17,10 @@
     {{ partial "headerUtils.html" . }}
   </div>
 </nav>
+
+<script defer>
+  const backToHomeLogo = document.querySelector('#backToHomeLogo');
+  backToHomeLogo.href = `${window.location.origin}/${
+    window.location.pathname.split('/')[1]
+  }/`;
+</script>

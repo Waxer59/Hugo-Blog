@@ -1,17 +1,31 @@
 baseURL = 'https://wadev-blog.netlify.app/'
 languageCode = 'en-us'
-efaultContentLanguage = "en"
 title = 'Wadev - Blog'
-
-[permalinks]
-  posts = "/:filename/"
+defaultContentLanguageInSubdir = true
+defaultContentLanguage = "en"
+enableRobotsTXT = true
 
 [params]
   author = "Wadev"
   description = "Hi! im Wadev and this is my blog"
+
+[permalinks]
+  posts = "/:filename/"
   
 [markup.goldmark.renderer]
 unsafe= true
 
 [outputs]
     home = [ "HTML", "JSON", "RSS"]
+
+[languages]
+  [languages.en]
+    contentDir = 'content'
+    languageName = 'en'
+    [languages.en.params]
+      linkedin = 'https://wadev-blog.netlify.app/'
+  [languages.es]
+    contentDir = 'content/es'
+    languageName = 'es'
+    [languages.es.params]
+      linkedin = 'https://wadev-blog.netlify.app/es'

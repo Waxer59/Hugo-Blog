@@ -4,6 +4,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>{{ if not .IsHome }}{{ .Title }} - {{ end }}{{ site.Title }}</title>
 
+  <meta property="og:site_name" content="Wadev Blog" />
+  <meta property="og:title" content="Hey! this is my Blog :-)" />
+  <meta property="og:url" content="https://wadev-blog.netlify.app/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:title" content="Wadev Blog" />
+  <meta
+    property="og:description"
+    content="Hi!, i'm Wadev and i'm a fullstack developer and this is my blog." />
+  <meta
+    name="description"
+    content="Hi!, i'm Wadev and i'm a fullstack developer and this is my blog." />
+
   {{ $styles := resources.Get "styles/style.css" }}
   <link rel="stylesheet" href="{{ $styles.RelPermalink }}" />
 
@@ -19,6 +32,6 @@
   {{ $themeMode := resources.Get "js/themeMode.js" }}
   <script defer src="{{ $themeMode.RelPermalink }}"></script>
 
-  <link rel="icon" type="image/x-icon" href="/favicon/favicon.ico" />
+  <link rel="icon" type="image/x-icon" href="/favicon/favicon.ico?" />
   <script src="https://unpkg.com/flowbite@1.6.1/dist/flowbite.min.js"></script>
 </head>

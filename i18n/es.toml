@@ -1,0 +1,69 @@
+[searchField]
+other = "Buscar"
+
+[postsTitle]
+other = "Publicaciones"
+
+[editArticleText]
+other = "¿Encontraste alguna errata? edita el articulo"
+
+[backButtonText]
+other = "Volver"
+
+[footerText]
+other = "Hecho por"
+
+[404PageTitle]
+other = "Pagina no encontrada :-("
+
+[404PageText]
+other = "No hemos encontrado lo que buscabas, pero tenemos algunos artículos maravillosos que estamos seguros que te encantarán. Seguro que te encantarán, tómate un descanso y vuelve cuando quieras."
+
+#* DATES
+
+[January]
+other= "Enero"
+
+[February]
+
+other= "Febrero"
+
+[March]
+
+other= "Marzo"
+
+[April]
+
+other= "Abril"
+
+[May]
+
+other= "Mayo"
+
+[June]
+
+other= "Junio"
+
+[July]
+
+other= "Julio"
+
+[August]
+
+other= "Agosto"
+
+[September]
+
+other= "Septiembre"
+
+[October]
+
+other= "Octubre"
+
+[November]
+
+other= "Noviembre"
+
+[December]
+
+other= "Diciembre"
