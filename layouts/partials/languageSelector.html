@@ -17,15 +17,15 @@
       d="M19 9l-7 7-7-7"></path>
   </svg>
 </button>
-{{ range $.AllTranslations }} {{ if not (eq .Lang $.Lang) }}
+{{ range $.Site.Home.AllTranslations }} {{ if not (eq .Lang $.Lang) }}
 <!-- Dropdown menu -->
 <div id="dropdown" class="dropdown z-10 hidden bg-primary-color rounded shadow">
   <div
     class="text-sm text-gray-700 dark:text-gray-200"
     aria-labelledby="dropdownDefaultButton">
-    <button class="block py-2 px-8 lenguageSelection">
+    <a href="{{ .Permalink }}" class="block py-2 px-8 lenguageSelection">
       {{ upper .Language.LanguageName }}
-    </button>
+    </a>
   </div>
 </div>
 {{ end }} {{ end }}
