@@ -1,6 +1,5 @@
 baseURL = 'https://deploy-preview-1--wadev-blog.netlify.app'
 languageCode = 'en-us'
-defaultContentLanguage = "EN"
 title = 'Wadev - Blog'
 defaultContentLanguageInSubdir = true
 
@@ -16,10 +15,12 @@ unsafe= true
 
 [languages]
   [languages.en]
-    baseURL = 'https://deploy-preview-1--wadev-blog.netlify.app/'
     contentDir = 'content'
     languageName = 'EN'
+    [languages.en.params]
+      linkedin = 'https://deploy-preview-1--wadev-blog.netlify.app'
   [languages.es]
     contentDir = 'content/es'
     languageName = 'ES'
-    baseURL = "https://deploy-preview-1--wadev-blog.netlify.app/es/"
+    [languages.es.params]
+      linkedin = 'https://deploy-preview-1--wadev-blog.netlify.app/es'
