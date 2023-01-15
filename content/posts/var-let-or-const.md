@@ -1,9 +1,9 @@
 ---
-title: '¿var, let o const?'
-date: 2023-01-19
-readTime: '15 minutos de lectura'
+title: '¿var, let or const?'
+date: 2023-01-10
+readTime: '15 minutes to read'
 technology: 'javascript'
-draft: false
+draft: true
 ---
 
 En JavaScript existen tres formas distintas para declarar una variable: **var**, **let** y **const**. Cada una de estas formas tiene distintas caracteristicas que nos puede llegar a ser de utilidad, pero a veces la forma de usarlas puede causar cierta confusión y estar indeciso por cual usar, por eso **¡En este artículo aprenderás cuando debes de usar cada uno y las diferencias que hay entre ellos!**
