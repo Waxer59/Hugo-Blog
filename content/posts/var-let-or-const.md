@@ -1,16 +1,16 @@
 ---
-title: '¿var, let or const?'
+title: 'var, let or const?'
 date: 2023-01-10
 readTime: '15 minutes to read'
 technology: 'javascript'
 draft: true
 ---
 
-En JavaScript existen tres formas distintas para declarar una variable: **var**, **let** y **const**. Cada una de estas formas tiene distintas caracteristicas que nos puede llegar a ser de utilidad, pero a veces la forma de usarlas puede causar cierta confusión y estar indeciso por cual usar, por eso **¡En este artículo aprenderás cuando debes de usar cada uno y las diferencias que hay entre ellos!**
+In JavaScript there are three different ways to declare a variable: **var**, **let** and **const**. Each of these forms has different characteristics that can be useful, but sometimes the way to use them can cause some confusion and be undecided about which one to use, so **In this article you will learn when to use each one and the differences between them!**.
 
-## Usando **var** para declarar una variable
+## Using **var** to declare a variable
 
-En JavaScript usamos la palabra reservada **var** para declarar una variable que puede ser **mutada**, esto quiere decir que el contenido de dicha variable puede cambiar, y al ser JavaScript un lenguaje no tipado podemos redeclarar nuestra variable con un tipo de dato totalmente distinto al anterior sin que nos de un error. [Enlace al ejemplo](https://dinamicjs.netlify.app/dmFyIGZvbyA9ICJIZWxsbyEiDQpmb28gPSA0Mg0KZm9vID0gdHJ1ZQ0KZm9vID0gWyJIZWxsbyIsICJXb3JsZCJdDQpmb28gPSB7DQogICAgSGVsbG86ICJNb20iDQp9DQoNCmNvbnNvbGUubG9nKGZvbyk7).
+In JavaScript we use the reserved word **var** to declare a variable that can be **muted**, this means that the content of this variable can change, and as JavaScript is a non-typed language we can re-declare our variable with a totally different data type without getting an error. [Link to example](https://dinamicjs.netlify.app/dmFyIGZvbyA9ICJIZWxsbyEiDQpmb28gPSA0Mg0KZm9vID0gdHJ1ZQ0KZm9vID0gWyJIZWxsbyIsICJXb3JsZCJdDQpmb28gPSB7DQogICAgSGVsbG86ICJNb20iDQp9DQoNCmNvbnNvbGUubG9nKGZvbyk7).
 
 ```javascript
 var foo = 'Hello!';
@@ -22,7 +22,7 @@ foo = {
 };
 ```
 
-Pero esto no queda aqui, y es que al estar usando **var** estamos declarando una variable **global** que puede ser accedida en cualquier lugar de nuestro documento [enlace al ejemplo](https://dinamicjs.netlify.app/Zm9yICh2YXIgaW5kZXggPSAwOyBpbmRleCA8IDEwOyBpbmRleCsrKSB7DQogICAgDQp9DQoNCmNvbnNvbGUubG9nKGluZGV4KTs=).
+But this does not stop here, because when using **var** we are declaring a **global** variable that can be accessed anywhere in our document. [Link to example](https://dinamicjs.netlify.app/Zm9yICh2YXIgaW5kZXggPSAwOyBpbmRleCA8IDEwOyBpbmRleCsrKSB7DQogICAgDQp9DQoNCmNvbnNvbGUubG9nKGluZGV4KTs=).
 
 ```javascript
 for (var index = 0; index < 10; index++) {}
@@ -30,21 +30,21 @@ for (var index = 0; index < 10; index++) {}
 console.log(index); // 10
 ```
 
-> Por motivos como este es por el cual se **desaconseja** el uso de **var** y usar en lugar de este
-> **const** o **let**.
+> For reasons like this it is **not recommended** to use **var** and to use instead **var**.
+> **const** or **let**.
 
-## Usando **let** para declarar una variable
+## Using **let** to declare a variable
 
-En JavaScript usamos la palabra reservada **let** para declarar variables las cuales pueden ser **mutadas** con un tipo totalmente distinto al anterior ( al igual que con la palabra reservada **var** ).
+In JavaScript we use the reserved word **let** to declare variables which can be **muted** with a totally different type than the previous one (as with the reserved word **var** ).
 
-Pero a diferencia de **var**, **let** no tiene un alzance dentro de todo el documento sino que este tiene un alcanze a **nivel de bloque**.
+But unlike **var**, **let** does not have a scope within the whole document but has a scope at **block level**.
 
-¿Que quiere decir **nivel de bloque**? lo que esto nos quiere decir es que esta solo podrá ser accedida dentro del bloque en el que se declaró **( { dentro de las llaves es un bloque } )**
-y fuera de ese bloque dicha variable no existirá. **¡Aclaremos esto con varios ejemplos!**
+What does **block level** mean? what this means is that it can only be accessed within the block in which it was declared **( { inside the braces is a block } )** and outside that block it will not exist.
+and outside that block this variable will not exist. \*\*Let's make this clear with several examples!
 
-### Primer ejemplo
+### First example
 
-Aqui tenemos el mismo primer ejemplo mostrado con **var** y que al sustituirla por **let** nuestro programa seguira funcionando igual a lo esperado [enlace al ejemplo](https://dinamicjs.netlify.app/bGV0IGZvbyA9ICJIZWxsbyEiDQpmb28gPSA0Mg0KZm9vID0gdHJ1ZQ0KZm9vID0gWyJIZWxsbyIsICJXb3JsZCJdDQpmb28gPSB7DQogICAgSGVsbG86ICJNb20iDQp9).
+Here we have the same first example shown with **var** and that by replacing it with **let** our program will continue to work as expected. [Link to example](https://dinamicjs.netlify.app/bGV0IGZvbyA9ICJIZWxsbyEiDQpmb28gPSA0Mg0KZm9vID0gdHJ1ZQ0KZm9vID0gWyJIZWxsbyIsICJXb3JsZCJdDQpmb28gPSB7DQogICAgSGVsbG86ICJNb20iDQp9).
 
 ```javascript
 let foo = 'Hello!';
@@ -56,9 +56,9 @@ foo = {
 };
 ```
 
-### Segundo ejemplo
+### Second example
 
-¿Funcionara igual con el segundo ejemplo que se dió con el uso de **var**? [enlace al ejemplo](https://dinamicjs.netlify.app/Zm9yIChsZXQgaW5kZXggPSAwOyBpbmRleCA8IDEwOyBpbmRleCsrKSB7DQogICAgDQp9DQoNCmNvbnNvbGUubG9nKGluZGV4KTsgLy8gUmVmZXJlbmNlRXJyb3I6IGluZGV4IGlzIG5vdCBkZWZpbmVk).
+Will it work the same with the second example given with the use of **var**? [Link to example](https://dinamicjs.netlify.app/Zm9yIChsZXQgaW5kZXggPSAwOyBpbmRleCA8IDEwOyBpbmRleCsrKSB7DQogICAgDQp9DQoNCmNvbnNvbGUubG9nKGluZGV4KTsgLy8gUmVmZXJlbmNlRXJyb3I6IGluZGV4IGlzIG5vdCBkZWZpbmVk).
 
 ```javascript
 for (let index = 0; index < 10; index++) {}
@@ -66,8 +66,8 @@ for (let index = 0; index < 10; index++) {}
 console.log(index); // ReferenceError: index is not defined
 ```
 
-En este caso al usar **let** y estar llamando a la variable fuera del bloque que se declaró no podremos acceder a esta ya que dicha variable no existe fuera de este.
-podriamos añadir una linea más a este ejemplo para que se vea mejor [enlace al ejemplo](https://dinamicjs.netlify.app/Zm9yIChsZXQgaW5kZXggPSAwOyBpbmRleCA8IDEwOyBpbmRleCsrKSB7DQogICAgY29uc29sZS5sb2coaW5kZXgpOyAvLyAwIDEgMiAzIDQgNSA2IDcgOCA5DQp9DQoNCmNvbnNvbGUubG9nKGluZGV4KTsgLy8gUmVmZXJlbmNlRXJyb3I6IGluZGV4IGlzIG5vdCBkZWZpbmVk)
+In this case when using **let** and calling the variable outside the block that was declared we will not be able to access it since this variable does not exist outside this block.
+we could add one more line to this example to make it look better [Link to example](https://dinamicjs.netlify.app/Zm9yIChsZXQgaW5kZXggPSAwOyBpbmRleCA8IDEwOyBpbmRleCsrKSB7DQogICAgY29uc29sZS5sb2coaW5kZXgpOyAvLyAwIDEgMiAzIDQgNSA2IDcgOCA5DQp9DQoNCmNvbnNvbGUubG9nKGluZGV4KTsgLy8gUmVmZXJlbmNlRXJyb3I6IGluZGV4IGlzIG5vdCBkZWZpbmVk)
 
 ```javascript
 for (let index = 0; index < 10; index++) {
@@ -77,11 +77,11 @@ for (let index = 0; index < 10; index++) {
 console.log(index); // ReferenceError: index is not defined
 ```
 
-Aqui podemos observar que podemos acceder perfectamente a la variable dentro de nuestro bloque pero fuera de este nos lanza un error indicandonos que la variable que hemos querido llamar no existe.
+Here we can observe that we can access perfectly to the variable inside our block but outside this one it throws us an error indicating us that the variable that we have wanted to call does not exist.
 
-### Tercer ejemplo
+### Third example
 
-Hasta aqui hemos entendido que usando **let** para declarar una variable dentro de un bloque solo podremos acceder a esta dentro de dicho bloque, pero ¿Que pasaria si declaramos nuestra variable usando **let** que está declarada por encima de ese bloque? ¿Imprimiria el contenido de esta o nos saltaria un error diciendo que no se ha encontrado? [enlace al ejemplo](https://dinamicjs.netlify.app/bGV0IGZ1bGxuYW1lID0gJ0pob24gRG9lJzsNCg0KZnVuY3Rpb24gc2FsdXRlKCkgew0KICBjb25zb2xlLmxvZyhmdWxsbmFtZSk7IC8vIEpob24gRG9lDQp9DQoNCnNhbHV0ZSgpOw==)
+So far we have understood that using **let** to declare a variable within a block we can only access it within that block, but what would happen if we declare our variable using **let** that is declared above that block? Would it print its content or would we get an error saying that it has not been found? [Link to example](https://dinamicjs.netlify.app/bGV0IGZ1bGxuYW1lID0gJ0pob24gRG9lJzsNCg0KZnVuY3Rpb24gc2FsdXRlKCkgew0KICBjb25zb2xlLmxvZyhmdWxsbmFtZSk7IC8vIEpob24gRG9lDQp9DQoNCnNhbHV0ZSgpOw==)
 
 ```javascript
 let fullname = 'Jhon Doe';
@@ -93,15 +93,15 @@ function salute() {
 salute();
 ```
 
-Pues como hemos podido ver la respuesta seria **SI** imprimiria el contenido de esta, ya que al estar en un nivel superior que el bloque donde la queremos llamar esta tiene un mayor alcanze y puede ser accedida por todos los bloques que esten en un nivel **inferior** a la declaracion de esta.
+As we have been able to see the answer would be **YES** it would print the content of this, since being in a higher level than the block where we want to call this has a greater scope and can be accessed by all the blocks that are in a level **inferior** to the declaration of this.
 
-Por que al estar siendo llamanda en un **inferior superior** que en la que esta declarada si se podrá acceder a esta.
+Because when it is being called in a **inferior superior** level than the one where it is declared, it can be accessed by all the blocks that are in a **inferior** level.
 
-## Usando **const** para declarar una variable
+## Using **const** to declare a variable
 
-En JavaScript usamos la palabra reservada **const** para declarar una variable que **NO** puede ser mutada, a diferencia de las dos anteriores y es por ello que esta es una **constante**.
+In JavaScript we use the reserved word **const** to declare a variable that can **NOT** be mutated, unlike the previous two and that is why this is a **constant**.
 
-Debido a esto al intentar cambiar el valor de esta nos saltará un error indicandonos que **NO** se puede cambiar el valor a una **constante**. [enlace al ejemplo](https://dinamicjs.netlify.app/Y29uc3QgZm9vID0gIkhlbGxvISI7DQpmb28gPSA0MjsgLy8gVHlwZUVycm9yOiBBc3NpZ25tZW50IHRvIGNvbnN0YW50IHZhcmlhYmxlLg0KZm9vID0gdHJ1ZTsgLy8gVHlwZUVycm9yOiBBc3NpZ25tZW50IHRvIGNvbnN0YW50IHZhcmlhYmxlLg0KZm9vID0gWyJIZWxsbyIsICJXb3JsZCJdOyAvLyBUeXBlRXJyb3I6IEFzc2lnbm1lbnQgdG8gY29uc3RhbnQgdmFyaWFibGUuDQpmb28gPSB7IA0KICAgIEhlbGxvOiAiTW9tIiAvLyBUeXBlRXJyb3I6IEFzc2lnbm1lbnQgdG8gY29uc3RhbnQgdmFyaWFibGUuDQp9)
+Because of this, when we try to change the value of this one, we will get an error indicating that **NOT** it is possible to change the value to a **constant**. [Link to example](https://dinamicjs.netlify.app/Y29uc3QgZm9vID0gIkhlbGxvISI7DQpmb28gPSA0MjsgLy8gVHlwZUVycm9yOiBBc3NpZ25tZW50IHRvIGNvbnN0YW50IHZhcmlhYmxlLg0KZm9vID0gdHJ1ZTsgLy8gVHlwZUVycm9yOiBBc3NpZ25tZW50IHRvIGNvbnN0YW50IHZhcmlhYmxlLg0KZm9vID0gWyJIZWxsbyIsICJXb3JsZCJdOyAvLyBUeXBlRXJyb3I6IEFzc2lnbm1lbnQgdG8gY29uc3RhbnQgdmFyaWFibGUuDQpmb28gPSB7IA0KICAgIEhlbGxvOiAiTW9tIiAvLyBUeXBlRXJyb3I6IEFzc2lnbm1lbnQgdG8gY29uc3RhbnQgdmFyaWFibGUuDQp9)
 
 ```javascript
 const foo = 'Hello!';
@@ -113,7 +113,7 @@ foo = {
 };
 ```
 
-El alcanze de **const** es exactamente el mismo que el de **let**, es por ello que este estará a **nivel de bloque** y no a **nivel global** a diferencia de **var**. [Enlace al ejemplo](https://dinamicjs.netlify.app/Y29uc3QgbXlOdW1iZXJzID0gWzEsIDIsIDMsIDQsIDVdOw0KDQpmb3IgKGNvbnN0IG51bWJlciBvZiBteU51bWJlcnMpIHsNCiAgICBjb25zb2xlLmxvZyhudW1iZXIpOw0KfQ0KDQpjb25zb2xlLmxvZyhudW1iZXIpOyAvLyBSZWZlcmVuY2VFcnJvcjogbnVtYmVyIGlzIG5vdCBkZWZpbmVk)
+The scope of **const** is exactly the same as **let**, that is why it will be at **block level** and not at **global level** unlike **var**. [Link to example](https://dinamicjs.netlify.app/Y29uc3QgbXlOdW1iZXJzID0gWzEsIDIsIDMsIDQsIDVdOw0KDQpmb3IgKGNvbnN0IG51bWJlciBvZiBteU51bWJlcnMpIHsNCiAgICBjb25zb2xlLmxvZyhudW1iZXIpOw0KfQ0KDQpjb25zb2xlLmxvZyhudW1iZXIpOyAvLyBSZWZlcmVuY2VFcnJvcjogbnVtYmVyIGlzIG5vdCBkZWZpbmVk)
 
 ```javascript
 const myNumbers = [1, 2, 3, 4, 5];
@@ -125,8 +125,8 @@ for (const number of myNumbers) {
 console.log(number); // ReferenceError: number is not defined
 ```
 
-## Conclusiones
+## Conclusions
 
-Hemos visto que usando **var** podemos declarar variables globales las cuales pueden ser mutadas, posteriormente hemos visto que el uso de **let** para declarar una variable esta tambien puede ser mutada al igual que con **var** pero el alcanze de esta es a **nivel de bloque** y finalmente hemos comprobado que declarando una variable con **const** esta no podrá ser mutada y el alcanze de esta será el mismo que el de la palabra reservada **let**, es decir que será a **nivel de bloque**.
+We have seen that using **var** we can declare global variables which can be mutated, then we have seen that the use of **let** to declare a variable can also be mutated as with **var** but the scope of this is at **block level** and finally we have found that declaring a variable with **const** this can not be mutated and the scope of this will be the same as that of the reserved word **let**, ie it will be at **block level**.
 
-Para concluir este articulo hay que **remarcar** que actualmente el uso de **var** está **desaconsejado** y usar en su lugar **let** o **const**, debido a que su uso puede dar problemas como los ya explicados en el articulo.
+To conclude this article we must **remark** that currently the use of **var** is **discouraged** and use instead **let** or **const**, because its use can give problems as those already explained in the article.
