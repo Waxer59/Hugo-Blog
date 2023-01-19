@@ -1,9 +1,9 @@
 ---
 title: 'var, let or const?'
-date: 2023-01-10
+date: 2023-01-19
 readTime: '15 minutes to read'
 technology: 'javascript'
-draft: true
+draft: false
 ---
 
 In JavaScript there are three different ways to declare a variable: **var**, **let** and **const**. Each of these forms has different characteristics that can be useful, but sometimes the way to use them can cause some confusion and be undecided about which one to use, so **In this article you will learn when to use each one and the differences between them!**.
