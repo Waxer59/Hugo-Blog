@@ -20,9 +20,10 @@
   <main class="max-w-[800px] mx-auto px-2 sm:px-4 py-2.5 flex flex-col gap-8">
     {{ .Content }}
     <footer class="text-center opacity-50">
-      <span></span>
+      {{ $editArticleUrl := .File.Path }}
+      {{ $editArticleUrl = replace $editArticleUrl "\\" "/" }}
       <a
-        href="https://github.com/Waxer59/Wadev-Blog/tree/main/content/posts/{{ .File.LogicalName }}"
+        href="https://github.com/Waxer59/Wadev-Blog/tree/main/content/{{ $editArticleUrl }}"
         target="_blank"
         >{{ i18n "editArticleText" . }} &nbsp;<i class="fa-brands fa-github"></i
       ></a>

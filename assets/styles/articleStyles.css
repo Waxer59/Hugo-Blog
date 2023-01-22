@@ -24,6 +24,7 @@ body {
 
 blockquote {
   background-color: var(--primary-color);
+  width: 100%;
   border-radius: 5px;
   max-width: 800px;
   margin: 0 auto;
@@ -41,6 +42,13 @@ p {
 
 li {
   margin-left: 36px;
+  list-style: disc;
+}
+
+ul, ol{
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
 }
 
 h1 {
