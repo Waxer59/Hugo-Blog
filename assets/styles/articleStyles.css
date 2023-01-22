@@ -195,7 +195,7 @@ code::before {
   background: #6c6c6c;
 }
 
-article a {
+article main a {
   opacity: 0.65 !important;
   text-decoration: underline !important;
 }
