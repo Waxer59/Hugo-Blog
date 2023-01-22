@@ -6,7 +6,7 @@ technology: 'hugo'
 draft: true
 ---
 
-Hugo es un framework multi-proposito de codigo abierto creado en 2015 por Steve Francia usado para generar paginas estaticas, está escrito en go lo que lo hace bastante rapido.
+Hugo es un framework multi-proposito de codigo abierto creado en 2015 por Steve Francia usado para generar paginas estaticas, está escrito en go lo que lo hace bastante rapido. Algo muy util de Hugo es la posibilidad que nos ofrece de crear paginas mediante el lenguaje de marcado **markdown**
 
 > ¡Este blog esta constrido con Hugo!
 
@@ -74,12 +74,58 @@ En este caso eligiremos el nombre de **intro-a-hugo** para nuestro proyecto.
 
 Esto nos generará un proyecto con varias carpetas y un archivo, **¡Expliquemos que es todo esto!**
 
-* **archetypes**
-* **assets**
-* **content**
-* **data**
-* **layouts**
-* **public**
-* **static**
-* **themes**
-* **config**
+* **archetypes** : En esta carpeta almacenaremos los archivos de plantilla predeterminados para diferentes tipos de contenido. Esto puede ser algo costoso de entender, **¡Pongamos un ejemplo de esto!**
+  
+Imagina que queremos para nuestra seccion **blog** una plantilla para cada articulo nuevo que creemos, algo que podriamos poner dentro de nuesta plantilla podria ser los meta-datos para no tener que estar escribiendo siempre los mismos metadatos que usaremos en nuestro articulo. 
+
+*¿Que son los metadatos?* los meta-datos es toda la informacion adicional que tiene nuestro articulo, dentro de estos está por ejemplo: el titulo, la fecha en la que se creó el articulo, si nuestra nueva pagina es un borrador entre otros.
+
+Entonces como hemos mencionado antes creariamos un arquetipo con el nombre de **blog.md** y dentro de este introduciriamos el siguiente contenido.
+
+
+```markdown
+---
+title: "{{ replace .Name "-" " " | title }}"
+date: {{ .Date }}
+draft: true
+---
+```
+
+> Todo el contenido que esta dentro de **- - -** forma
+> parte de los metadatos de nuestro articulo
+
+Ya tenemos nuestro arquetipo listo, ahora cuando querramos crear un nuevo articulo del blog usando este arquetipo usariamos el siguiente commando.
+
+```powershell
+hugo new blog/mi-nuevo-post.md -- archetype=blog
+```
+
+Este nos generaria un archivo dentro de la carpeta **blog** llamado **mi-nuevo-post.md** tal que así.
+
+```markdown
+---
+title: "Mi Nuevo Post"
+date: 2023-01-22T13:58:08+01:00
+draft: true
+---
+```
+
+* **assets** : En esta carpeta almacenaremos todo el contenido estatico de nuestro sitio web, hasta aqui su uso es bastante similar al de la carpeta **static**, la diferencia que hay entre estas dos carpetas es la siguiente.
+
+Cuando tu introduces archivos dentro de la carpeta **static** Hugo los copia y los coloca dentro de la carpeta **public** tal y como son, pero los archivos introducidos en la carpeta **assets** son procesados por Hugo antes de ser servidos a diferencia de lo que ocurria dentro de la carpeta **static**, esto puede ser de gran utilidad para optimizar nuestros archivos introducidos a dicha carpeta.
+
+* **content** : En esta carpeta almacenaremos todo el contenido de nuestra web, es importante saber que cada carpeta que este en el nivel superior **Hugo** la considerara una sección de contenido. Por ejemplo si tenemos una web en la que queremos tres secciones principales **blog**, **articulos** y **tutoriales**, tendremos tres directorios en: **content/blog**, **content/articulos** y **content/tutoriales**
+
+* **data** : Esta carpeta es usada para almacenar todos los archivos de configuración que pueden ser usados por Hugo.
+
+* **layouts** : En esta carpeta almacenaremos toda la estructura y diseño de nuestro sitio web, dentro de esta carpeta tenemos subcarpetas que las explicaremos más adelante.
+
+* **public** : En esta carpeta Hugo almacenara todos los archivos generados que representan el sitio web final, esta carpeta es la que se usara para nuestro sitio cuando lo despleguemos.
+
+* **static** : En esta carpeta almacenaremos todo el contenido estatico de nuestra web que será servido directamente al navegador del y usario, estos son servidos tal y como son, es por ello estos no son procesados por Hugo.
+
+* **themes** : En esta carpeta almacenaremos nuestros temas o diseños que utilizaremos para hacer nuestra web, estos pueden ser encontrados en la pagina de [temas de Hugo](https://themes.gohugo.io/)
+
+* **config** : Este es el archivo de configuracion de **Hugo**, la extension de este puede ser: **yaml**, **toml** y **json**, aqui almacenaremos todas las configuraciones necesarias para nuestra web.
+
+### Creemos nuestra primera pagina

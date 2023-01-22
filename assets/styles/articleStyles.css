@@ -41,7 +41,6 @@ p {
 }
 
 li {
-  margin-left: 36px;
   list-style: disc;
 }
 
@@ -169,6 +168,16 @@ code::before {
   top: -12px;
 }
 
+.language-markdown::before {
+  background: url(../icons/markdown.png);
+  width: 32px;
+  height: 32px;
+  background-size: cover;
+  content: '';
+  border-radius: 5px;
+  top: -12px;
+}
+
 ::-webkit-scrollbar {
   width: 10px;
 }
@@ -186,8 +195,7 @@ code::before {
   background: #6c6c6c;
 }
 
-main p a {
-  opacity: 0.65;
-  max-width: 800px !important;
-  text-decoration: underline;
+article a {
+  opacity: 0.65 !important;
+  text-decoration: underline !important;
 }
