@@ -45,7 +45,8 @@ li {
   list-style: disc;
 }
 
-ul, ol{
+ul,
+ol {
   display: flex;
   flex-direction: column;
   gap: 15px;
