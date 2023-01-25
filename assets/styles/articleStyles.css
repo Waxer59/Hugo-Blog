@@ -4,7 +4,7 @@
 }
 
 html.dark:root {
-  --primary-color: #1c1c1c !important;
+  --primary-color: #222222 !important;
   --secondary-color: #2c2c2c !important;
 }
 
