@@ -31,7 +31,7 @@ Markdown usa el operador *( # )* para definir un encabezado. Pero esto no se que
 ###### Soy un encabezado h6
 ```
 
-## Parrafos , decoradores y sepadarodes
+## Parrafos , decoradores de texto y sepadarodes
 
 ### Parafos
 

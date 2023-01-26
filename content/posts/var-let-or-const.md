@@ -40,7 +40,7 @@ In JavaScript we use the reserved word **let** to declare variables which can be
 But unlike **var**, **let** does not have a scope within the whole document but has a scope at **block level**.
 
 What does **block level** mean? what this means is that it can only be accessed within the block in which it was declared **( { inside the braces is a block } )** and outside that block it will not exist.
-and outside that block this variable will not exist. \*\*Let's make this clear with several examples!
+and outside that block this variable will not exist. **Let's make this clear with several examples!**
 
 ### First example
 
