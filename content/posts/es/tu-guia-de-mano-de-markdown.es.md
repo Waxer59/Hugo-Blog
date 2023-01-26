@@ -59,7 +59,7 @@ __Soy un texto subrayado__
 
 ```
 
-> Es importante mencionar que estos se pueden combinar para mostrar por ejemplo un texto en ***negrita en cursiva***, un texto en ~~***negrita cursiva y tachado***~~, etc.
+> Es importante mencionar que estos se pueden combinar, un ejemplo de esto puede ser: un texto en ***negrita en cursiva*** o un texto en ~~***negrita cursiva y tachado***~~, etc.
 
 ### Separadores
 
@@ -161,7 +161,7 @@ Las tablas se definen de la siguiente forma. [Enlace al ejemplo](https://www.dig
 > **IMPORTANTE**. Las lineas que hacen la separación entre el de cada columna y las filas que es estan debajo de este ***( |---------------| )*** este por que 
 > si no es asi Markdown no detectará que es una tabla lo que estas poniendo.
 
-## Agregar citas al documento
+## Citas
 
 Para agregar citas al documento solo debemos de hacer uso del operador *( > )* delante del texto que queremos citar, veamos 
 un ejemplo. [Enlace al ejemplo](https://www.digitalocean.com/community/markdown?md=%3E+Soy+una+cita%21%21)
