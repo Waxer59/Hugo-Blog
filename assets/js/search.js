@@ -100,7 +100,7 @@ if ([...searchElement]?.every((el) => el.value.trim() === '')) {
 searchElement.forEach((searchInput) => {
   searchInput.addEventListener('input', async () => {
     if (searchInput.value.length > 0) {
-      paginationControlsContainer.style.display = 'none';
+      paginationControlsContainer.classList.add('hidden')
     } else if (
       !prevBtn.classList.contains('hidden') ||
       !nextBtn.classList.contains('hidden')
