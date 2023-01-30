@@ -8,7 +8,7 @@ const paginationControlsContainer = document.querySelector(
 
 const urlSearchParams = new URLSearchParams(window.location.search);
 const params = Object.fromEntries(urlSearchParams.entries());
-const pageParam = +params.page ?? 1;
+const pageParam = params.page ? +params.page : 1;
 
 const URLS = {
   GET_POSTS_URL: `${
@@ -49,6 +49,9 @@ function mapArticlePost({ url, title, date, content, readTime, technology }) {
 async function displayAllPosts() {
   const content = await fetchData(URLS.GET_POSTS_URL);
   const totalPages = content.length / 10 + 1;
+  if (pageParam > totalPages) {
+    window.location.href = window.location.origin + window.location.pathname;
+  }
   if (pageParam + 1 < totalPages) {
     nextBtn.style.display = 'block';
     nextBtn.href =
