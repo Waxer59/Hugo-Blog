@@ -1,3 +1,9 @@
+const URLS = {
+  GET_POSTS_URL: `${
+    window.location.origin + window.location.pathname
+  }index.json`,
+  BASE_URL: `${window.location.origin}`
+};
 const searchElement = document.querySelectorAll('.search-navbar');
 const container = document.querySelector('#pageContent');
 const nextBtn = document.querySelector('#next-btn');
@@ -9,20 +15,20 @@ const paginationControlsContainer = document.querySelector(
 const urlSearchParams = new URLSearchParams(window.location.search);
 const params = Object.fromEntries(urlSearchParams.entries());
 const pageParam = params.page ? +params.page : 1;
-
-const URLS = {
-  GET_POSTS_URL: `${
-    window.location.origin + window.location.pathname
-  }index.json`,
-  BASE_URL: `${window.location.origin}`
-};
+let content = '';
 
 async function fetchData(url) {
-  const response = await fetch(url).then();
-  return await response.json();
+  try {
+    let response = await fetch(url);
+    response = await response.json();
+    content = response;
+    return response;
+  } catch (error) {
+    console.error(error);
+  }
 }
 
-function mapArticlePost({ url, title, date, content, readTime, technology }) {
+function mapArticlePost({ url, title, date, readTime, technology }) {
   return `<a
     class="text-center block bg-primary-color mt-11 max-w-[70vw] mx-auto rounded-lg transition-transform duration-500 ease hover:translate-x-5"
     href="${url}">
@@ -47,7 +53,7 @@ function mapArticlePost({ url, title, date, content, readTime, technology }) {
 }
 
 async function displayAllPosts() {
-  const content = await fetchData(URLS.GET_POSTS_URL);
+  await fetchData(URLS.GET_POSTS_URL);
   const totalPages = content.length / 10 + 1;
   if (pageParam > totalPages) {
     window.location.href = window.location.origin + window.location.pathname;
@@ -69,6 +75,7 @@ async function displayAllPosts() {
   if (prevBtn.style.display === 'block' || nextBtn.style.display === 'block') {
     paginationControlsContainer.style.display = 'block';
   }
+
   container.innerHTML = '';
   [...content]
     .slice((pageParam - 1) * 10, pageParam * 10)
@@ -89,20 +96,36 @@ if ([...searchElement]?.every((el) => el.value.trim() === '')) {
 
 searchElement.forEach((searchInput) => {
   searchInput.addEventListener('input', async () => {
-    let content = await fetchData(URLS.GET_POSTS_URL);
-    content = content.filter((el) =>
+    if (searchInput.value.length > 0) {
+      paginationControlsContainer.style.display = 'none';
+    } else if (
+      prevBtn.style.display === 'block' ||
+      nextBtn.style.display === 'block'
+    ) {
+      paginationControlsContainer.style.display = 'block';
+    }
+    const filteredContent = [...content].filter((el) =>
       el.title.toLowerCase().includes(searchInput?.value.toLowerCase())
     );
     container.innerHTML = '';
-    content.forEach(({ url, title, date, content, readTime, technology }) => {
-      container.innerHTML += mapArticlePost({
-        url,
-        title,
-        date,
-        content,
-        readTime,
-        technology
-      });
-    });
+    if(filteredContent.length <= 0){
+      container.innerHTML += `
+      <p class="text-center p-[50px] text-5xl">
+      Nothing found :-(
+      </p>
+      `
+    }
+    filteredContent.forEach(
+      ({ url, title, date, content, readTime, technology }) => {
+        container.innerHTML += mapArticlePost({
+          url,
+          title,
+          date,
+          content,
+          readTime,
+          technology
+        });
+      }
+    );
   });
 });
