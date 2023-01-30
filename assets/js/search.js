@@ -59,21 +59,24 @@ async function displayAllPosts() {
     window.location.href = window.location.origin + window.location.pathname;
   }
   if (pageParam + 1 < totalPages) {
-    nextBtn.style.display = 'block';
+    nextBtn.classList.remove('hidden');
     nextBtn.href =
       window.location.origin +
       window.location.pathname +
       `?page=${pageParam + 1}`;
   }
   if (pageParam > 1) {
-    prevBtn.style.display = 'block';
+    prevBtn.classList.remove('hidden');
     prevBtn.href =
       window.location.origin +
       window.location.pathname +
       `?page=${pageParam - 1}`;
   }
-  if (prevBtn.style.display === 'block' || nextBtn.style.display === 'block') {
-    paginationControlsContainer.style.display = 'block';
+  if (
+    !prevBtn.classList.contains('hidden') ||
+    !nextBtn.classList.contains('hidden')
+  ) {
+    paginationControlsContainer.classList.remove('hidden');
   }
 
   container.innerHTML = '';
@@ -99,10 +102,10 @@ searchElement.forEach((searchInput) => {
     if (searchInput.value.length > 0) {
       paginationControlsContainer.style.display = 'none';
     } else if (
-      prevBtn.style.display === 'block' ||
-      nextBtn.style.display === 'block'
+      !prevBtn.classList.contains('hidden') ||
+      !nextBtn.classList.contains('hidden')
     ) {
-      paginationControlsContainer.style.display = 'block';
+      paginationControlsContainer.classList.remove('hidden');
     }
     const filteredContent = [...content].filter((el) =>
       el.title.toLowerCase().includes(searchInput?.value.toLowerCase())
