@@ -1,5 +1,5 @@
 ---
-title: '¿var, let o const?'
+title: 'test6'
 date: 2023-01-19
 readTime: '15 minutos de lectura'
 technology: 'javascript'
