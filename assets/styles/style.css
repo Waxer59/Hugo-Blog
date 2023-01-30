@@ -1223,24 +1223,12 @@ input:checked + .toggle-bg {
   max-width: 800px !important;
 }
 
-.max-w-\[70vw\] {
-  max-width: 70vw !important;
-}
-
-.max-w-\[36px\] {
-  max-width: 36px !important;
-}
-
-.max-w-\[700px\] {
-  max-width: 700px !important;
-}
-
-.max-w-\[600px\] {
-  max-width: 600px !important;
-}
-
 .max-w-\[500px\] {
   max-width: 500px !important;
+}
+
+.max-w-\[70vw\] {
+  max-width: 70vw !important;
 }
 
 .flex-1 {

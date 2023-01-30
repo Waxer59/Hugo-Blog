@@ -93,7 +93,7 @@ async function displayAllPosts() {
       });
     });
 }
-if ([...searchElement]?.every((el) => el.value.trim() === '')) {
+if ([...searchElement]?.every((el) => el.value.trim() === '') && window.location.pathname.split("/").length === 3 ) {
   displayAllPosts();
 }
 
