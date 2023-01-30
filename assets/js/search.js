@@ -1,5 +1,14 @@
 const searchElement = document.querySelectorAll('.search-navbar');
 const container = document.querySelector('#pageContent');
+const nextBtn = document.querySelector('#next-btn');
+const prevBtn = document.querySelector('#prev-btn');
+const paginationControlsContainer = document.querySelector(
+  '#paginationControlsContainer'
+);
+
+const urlSearchParams = new URLSearchParams(window.location.search);
+const params = Object.fromEntries(urlSearchParams.entries());
+const pageParam = +params.page ?? 1;
 
 const URLS = {
   GET_POSTS_URL: `${
@@ -39,22 +48,39 @@ function mapArticlePost({ url, title, date, content, readTime, technology }) {
 
 async function displayAllPosts() {
   const content = await fetchData(URLS.GET_POSTS_URL);
+  const totalPages = content.length / 10 + 1;
+  if (pageParam + 1 < totalPages) {
+    nextBtn.style.display = 'block';
+    nextBtn.href =
+      window.location.origin +
+      window.location.pathname +
+      `?page=${pageParam + 1}`;
+  }
+  if (pageParam > 1) {
+    prevBtn.style.display = 'block';
+    prevBtn.href =
+      window.location.origin +
+      window.location.pathname +
+      `?page=${pageParam - 1}`;
+  }
+  if (prevBtn.style.display === 'block' || nextBtn.style.display === 'block') {
+    paginationControlsContainer.style.display = 'block';
+  }
   container.innerHTML = '';
-  content.forEach(({ url, title, date, content, readTime, technology }) => {
-    container.innerHTML += mapArticlePost({
-      url,
-      title,
-      date,
-      content,
-      readTime,
-      technology
+  [...content]
+    .slice((pageParam - 1) * 10, pageParam * 10)
+    .forEach(({ url, title, date, content, readTime, technology }) => {
+      container.innerHTML += mapArticlePost({
+        url,
+        title,
+        date,
+        content,
+        readTime,
+        technology
+      });
     });
-  });
 }
-if (
-  searchElement[0]?.value.trim() === '' &&
-  searchElement[1]?.value.trim() === ''
-) {
+if ([...searchElement]?.every((el) => el.value.trim() === '')) {
   displayAllPosts();
 }
 
