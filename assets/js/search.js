@@ -108,12 +108,12 @@ searchElement.forEach((searchInput) => {
       el.title.toLowerCase().includes(searchInput?.value.toLowerCase())
     );
     container.innerHTML = '';
-    if(filteredContent.length <= 0){
+    if (filteredContent.length <= 0) {
       container.innerHTML += `
       <p class="text-center p-[50px] text-5xl">
       Nothing found :-(
       </p>
-      `
+      `;
     }
     filteredContent.forEach(
       ({ url, title, date, content, readTime, technology }) => {
