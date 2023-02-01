@@ -15,6 +15,7 @@ const paginationControlsContainer = document.querySelector(
 const urlSearchParams = new URLSearchParams(window.location.search);
 const params = Object.fromEntries(urlSearchParams.entries());
 const pageParam = params.page ? +params.page : 1;
+const ARTICLES_PER_PAGE = 10;
 let content = '';
 
 async function fetchData(url) {
@@ -54,7 +55,7 @@ function mapArticlePost({ url, title, date, readTime, technology }) {
 
 async function displayAllPosts() {
   await fetchData(URLS.GET_POSTS_URL);
-  const totalPages = content.length / 10 + 1;
+  const totalPages = content.length / ARTICLES_PER_PAGE + 1;
   if (pageParam > totalPages) {
     window.location.href = window.location.origin + window.location.pathname;
   }
@@ -81,7 +82,7 @@ async function displayAllPosts() {
 
   container.innerHTML = '';
   [...content]
-    .slice((pageParam - 1) * 10, pageParam * 10)
+    .slice((pageParam - 1) * ARTICLES_PER_PAGE, pageParam * ARTICLES_PER_PAGE)
     .forEach(({ url, title, date, content, readTime, technology }) => {
       container.innerHTML += mapArticlePost({
         url,
@@ -93,14 +94,17 @@ async function displayAllPosts() {
       });
     });
 }
-if ([...searchElement]?.every((el) => el.value.trim() === '') && window.location.pathname.split("/").length === 3 ) {
+if (
+  [...searchElement]?.every((el) => el.value.trim() === '') &&
+  window.location.pathname.split('/').length === 3
+) {
   displayAllPosts();
 }
 
 searchElement.forEach((searchInput) => {
   searchInput.addEventListener('input', async () => {
     if (searchInput.value.length > 0) {
-      paginationControlsContainer.classList.add('hidden')
+      paginationControlsContainer.classList.add('hidden');
     } else if (
       !prevBtn.classList.contains('hidden') ||
       !nextBtn.classList.contains('hidden')
