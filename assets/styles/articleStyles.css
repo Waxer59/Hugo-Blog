@@ -195,7 +195,7 @@ code::before {
   background: #6c6c6c;
 }
 
-article main a {
+article main a:not(:has(img)) {
   opacity: 0.65 !important;
   text-decoration: underline !important;
 }
