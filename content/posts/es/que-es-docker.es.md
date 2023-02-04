@@ -8,20 +8,29 @@ draft: true
 
 Docker es una herramienta de codigo abierto creada en 2013 por **Solomon Hykes**, que nos permite empaquetar y deplegar aplicaciones de manera segura y eficiente. Con Docker, podemos garantizar que nuestras aplicaciones funcionarán de manera consistente en cualquier entorno. 
 
-Docker posee varios conceptos como:
-* Contenedores
-* Imagenes
-* Volumenes
-* Dockerizar aplicaciones
-* Redes de Docker
+Docker es una tecnología que está ganando cada vez más terreno en la industria tecnológica. Con su capacidad de crear y gestionar contenedores de aplicaciones, Docker ofrece una solución eficiente y flexible para desplegar y ejecutar aplicaciones. Debido a su creciente importancia, es fundamental tener al menos un conocimiento básico de los conceptos clave de Docker. 
 
-entre otros, es por ello que te vamos a explicar cada concepto además de como docker logra ser tan eficiente y seguro a la hora de ejecutar nuestras aplicaciones, pero antes hagamos una pequeña introduccion sobre como podemos usar Docker.
+Es esencial tener una comprensión básica de los siguientes conceptos en relación a Docker:
+* **Contenedores**
+* **Imagenes**
+* **Volumenes**
+* **Dockerizar aplicaciones**
+* **Redes de Docker**
+* **DockerFile**
+* **Docker Compose**
+* **Docker Hub**
+
+Es por ello que en este articulo explicaremos cada uno de estos conceptos, además de como docker logra ser tan eficiente y seguro a la hora de ejecutar nuestras aplicaciones.
+
+Pero antes de ello hagamos una pequeña introduccion acerca de como podemos usar Docker en nuestra maquina.
 
 ## **¿Como usar Docker?**
 
 Para poder usar Docker debemos de instalar en nuestro sistema la herramienta **Docker Dessktop**, esta podemos encontrarla dentro de la [pagina oficial de Docker](https://www.docker.com/)
 
-### ¿Qué es Docker Desktop?
+> Es importante saber que para poder hacer uso de Docker en Windows deberemos de instalar el WSL 2 ( Windows Subsystem for Linux ), por lo que tendremos que dirigirnos a la [guia oficial de instalación de WSL](https://learn.microsoft.com/en-us/windows/wsl/install) e instalarlo.
+
+### **¿Qué es Docker Desktop?**
 
 Docker Desktop es una plataforma la cual posee las herramientas necesarias para ejecutar nuestros contenedores.
 
@@ -56,4 +65,17 @@ Como podemos observar a la izquierda se encuentra como funciona una maquina virt
 
 Tambien dentro de este diagrama se pueden observar diferencias, una de ellas es que todos los contenedores se ejecutan dentro del **Docker Engine** en lugar de tener instalado un sistema operativo completo para cada sistema como tenemos con las maquinas virtuales, esto ayuda bastante a mejorar el rendimiento de nuestras aplicaciones dentro de Docker y de optimizar el espacio en disco que estas ocupan.
 
-Esto nos permite mayor portabilidad, velocidad de inicio y un uso más optimo de los recursos, esto es bastante importante para el rendimiento que tendrá nuestra aplicación para cuando este desplegada y optimizar también en los gastos que tendremos con nuestros servidores.
+Esto nos ofrece mayor portabilidad, un tiempo de inicio más rápido y un uso más eficiente de los recursos, lo que es fundamental para el despliegue y optimización de nuestra aplicación, y también ayuda a reducir los costos asociados con los servidores.
+
+## **¿Qué es una imagen?**
+## **¿Qué es un volumen?**
+## **¿Qué es dockerizar una aplicación?**
+## **¿Que son las redes de Docker?**
+## **¿Que es el Docker Hub?**
+## **¿Que es Docker Compose?**
+## **¿Que es el DockerFile?**
+## **Casos de uso de Docker**
+
+## **Conclusiones**
+
+En conclusión, Docker es una herramienta poderosa y versátil que permite empaquetar y desplegar aplicaciones en un entorno aislado y portable, garantizando que funcionen de manera consistente en cualquier entorno. Además, Docker Hub nos permite compartir y descargar imágenes de forma sencilla. En definitiva, Docker nos ofrece una forma flexible y eficiente de desarrollar, distribuir y ejecutar aplicaciones en cualquier entorno, lo que lo convierte en una herramienta esencial para cualquier desarrollador o administrador de sistemas.
