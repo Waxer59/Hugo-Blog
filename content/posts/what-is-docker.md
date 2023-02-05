@@ -1,9 +1,9 @@
 ---
 title: 'What is docker?'
-date: 2023-01-12
+date: 2023-02-05
 readTime: '20 minutes to read'
 technology: 'docker'
-draft: true
+draft: false
 ---
 
 Docker is an open-source tool created in 2013 by **Solomon Hykes**, which allows us to package and deploy applications securely and efficiently. With Docker, we can ensure that our applications will work consistently in any environment.
@@ -12,21 +12,21 @@ Docker is a technology that is gaining more and more ground in the tech industry
 
 It is therefore essential to have a basic understanding of the following Docker concepts:
 
-* **Containers**
+* **[Containers](#what-is-a-container)**
 
-* **Images**
+* **[Images](#what-is-an-image)**
 
-* **Volumes**
+* **[Volumes](#what-is-a-volume)**
 
-* **Dockerizing applications**
+* **[Dockerizing applications](#what-is-dockerizing-an-application)**
 
-* **Docker Networks**
+* **[Docker Networks](#what-are-docker-networks)**
 
-* **Dockerfile**
+* **[Dockerfile](#what-is-the-dockerfile)**
 
-* **Docker Compose**
+* **[Docker Compose](#what-is-docker-compose)**
 
-* **Docker Hub**
+* **[Docker Hub](#what-is-the-docker-hub)**
 
 In this article, we will explain each of these concepts, as well as how Docker achieves efficiency and security when executing our applications.
 

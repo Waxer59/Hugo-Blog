@@ -3,7 +3,7 @@ title: '¿Que es docker?'
 date: 2023-02-05
 readTime: '20 minutos de lectura'
 technology: 'docker'
-draft: true
+draft: false
 ---
 
 Docker es una herramienta de codigo abierto creada en 2013 por **Solomon Hykes**, que nos permite empaquetar y deplegar aplicaciones de manera segura y eficiente. Con Docker, podemos garantizar que nuestras aplicaciones funcionarán de manera consistente en cualquier entorno. 
@@ -12,21 +12,21 @@ Docker es una tecnología que está ganando cada vez más terreno en la industri
 
 Es por ello esencial tener una comprensión básica de los siguientes conceptos de Docker:
 
-* **[Contenedores](#qué-es-un-contenedor)**
+* **[Contenedores](#que-es-un-contenedor)**
 
-* **Imagenes**
+* **[Imagenes](#que-es-una-imagen)**
 
-* **Volumenes**
+* **[Volumenes](#que-es-un-volumen)**
 
-* **Dockerizar aplicaciones**
+* **[Dockerizar aplicaciones](#que-es-dockerizar-una-aplicacion)**
 
-* **Redes de Docker**
+* **[Redes de Docker](#que-son-las-redes-de-docker)**
 
-* **Dockerfile**
+* **[Dockerfile](#que-es-el-dockerfile)**
 
-* **Docker Compose**
+* **[Docker Compose](#que-es-docker-compose)**
 
-* **Docker Hub**
+* **[Docker Hub](#que-es-el-docker-hub)**
 
 En este articulo explicaremos cada uno de estos conceptos, además de como docker logra ser tan eficiente y seguro a la hora de ejecutar nuestras aplicaciones.
 
@@ -38,7 +38,7 @@ Para poder usar Docker debemos de instalar en nuestro sistema la herramienta **D
 
 > Es importante saber que para poder hacer uso de Docker en Windows deberemos de instalar el WSL 2 ( Windows Subsystem for Linux ), por lo que tendremos que dirigirnos a la [guia oficial de instalación de WSL](https://learn.microsoft.com/en-us/windows/wsl/install) e instalarlo.
 
-### **¿Qué es Docker Desktop?**
+### **¿Que es Docker Desktop?**
 
 Docker Desktop es una plataforma la cual posee las herramientas necesarias para ejecutar nuestros contenedores.
 
@@ -57,7 +57,7 @@ Dicha portabilidad nos asegura que nuestra aplicación funcionará dentro de cua
 
 Además, al hacer uso de contenedores en lugar de máquinas virtuales completas mejora bastante el rendimiento de este y hace que sea mas ligero que una máquina virtual.
 
-## **¿Qué es un contenedor?**
+## **¿Que es un contenedor?**
 
 Los contenedores son entornos aislados los cuales poseen todas las configuraciones y dependencias necesartias paara ejecutar nuestras imagenes de manera eficiente.
 
@@ -77,13 +77,13 @@ Dentro de este diagrama se pueden observar diferencias entre la maquina virtual 
 
 Esto nos ofrece mayor portabilidad, un tiempo de inicio más rápido y un uso más eficiente de los recursos, lo que es fundamental para el despliegue y optimización de nuestra aplicación, y también ayuda a reducir los costos asociados con los servidores.
 
-## **¿Qué es una imagen?**
+## **¿Que es una imagen?**
 
 Una imagen de Docker es un archivo que contiene todos los elementos necesarios para ejecutar una aplicación en un contenedor, incluyendo el codigo fuente, archivos de configuración, bibliotecas y recursos necesarios.
 
 Una vez creada nuestra imagen podemos usar esta dentro de uno o varios contenedores ejecutandose a partir de esta.
 
-## **¿Qué es un volumen?**
+## **¿Que es un volumen?**
 
 Un volumen de Docker es una forma de persistir datos generados por un contenedorr, que a diferencia de los datos almacenados dentro del contenedor que serán eliminados una vez el contenedor se elimine o se detenga, estos persisten aun cuando el contenedor sea eliminado.
 
@@ -91,7 +91,7 @@ Estos se pueden compartir y reutilizar entre diferentes contenedores y permiten 
 
 Por ejemplo, imagina que tenemos una base de datos de pruebas dentro de un contenedor de Docker y al eliminar o reiniciar nuestro contenedor perdemos todos los datos y tenemos que volver a insertarlos, esto nos haria perder mucho el tiempo insertando de nuevo los datos ¿cierto?, pues esto se solucionaria usando un volumen, ya que este nos guardaria toda nuestra base de datos y al levantar de nuevo el contenedor, todos los datos estarian disponibles de nuevo.
 
-## **¿Qué es dockerizar una aplicación?**
+## **¿Que es dockerizar una aplicacion?**
 
 Dockerizar una aplicación consiste en empaquetarla en un contenedor de Docker para facilitar su distribución y ejecución en cualquier entorno. Esto permite tener una mayor portabilidad, flexibilidad y aislamiento de la aplicación de su entorno de ejecución.
 

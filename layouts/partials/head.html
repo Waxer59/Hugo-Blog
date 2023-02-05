@@ -31,6 +31,9 @@
   {{ $searchScript := resources.Get "js/search.js" }}
   <script defer src="{{ $searchScript.RelPermalink }}"></script>
 
+  {{ $smoothScrollScript := resources.Get "js/smoothScroll.js" }}
+  <script defer src="{{ $smoothScrollScript.RelPermalink }}"></script>
+
   {{ $themeMode := resources.Get "js/themeMode.js" }}
   <script defer src="{{ $themeMode.RelPermalink }}"></script>
 
