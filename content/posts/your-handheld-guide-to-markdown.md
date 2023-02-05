@@ -1,7 +1,7 @@
 ---
 title: 'Your handheld guide to Markdown'
 date: 2023-01-26
-readTime: '20 minutes to read'
+readTime: '15 minutes to read'
 technology: 'markdown'
 draft: false
 ---
