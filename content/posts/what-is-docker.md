@@ -38,7 +38,7 @@ In order to use Docker, we must install the **Docker Desktop** tool on our syste
 
 > It is important to know that in order to use Docker on Windows, we will need to install WSL 2 (Windows Subsystem for Linux), so we will need to go to the [official installation guide for WSL](https://learn.microsoft.com/en-us/windows/wsl/install)  and install it.
 
-### **What is Docker Desktop?**
+## **What is Docker Desktop?**
 
 Docker Desktop is a platform that has the necessary tools to run our containers.
 
