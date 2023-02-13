@@ -3,7 +3,7 @@ title: 'What is Go?'
 date: 2023-02-13
 readTime: '5 minutes to read'
 technology: 'go'
-draft: true
+draft: false
 ---
 
 **Go** o **Golang** es un lenguaje de programación de código abierto desarrollado por Google. Fue lanzado en 2009 y desde entonces ha ganado popularidad gracias a sus características únicas, como su sintaxis sencilla, su capacidad para crear programas eficientes y su enfoque en la simplicidad y la claridad. 
