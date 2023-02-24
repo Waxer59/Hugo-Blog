@@ -6,9 +6,9 @@ technology: 'go'
 draft: false
 ---
 
-**Go** o **Golang** es un lenguaje de programación de código abierto desarrollado por Google. Fue lanzado en 2009 y desde entonces ha ganado popularidad gracias a sus características únicas, como su sintaxis sencilla, su capacidad para crear programas eficientes y su enfoque en la simplicidad y la claridad. 
+**Go** or **Golang** is an open source programming language developed by Google. It was released in 2009 and has since gained popularity thanks to its unique features, such as its simple syntax, its ability to create efficient programs, and its focus on simplicity and clarity. 
 
-**Go** se utiliza ampliamente en la creación de servidores. Esto hace que su comunidad sea activa y además de que **Go** está respaldado por **Google**, esto significa que tenemos una gran cantidad de recursos disponibles para aprender y desarrollar nuestros proyectos. [Go official website](https://go.dev/)
+**Go** is widely used in the creation of servers. This makes its community active and since **Go** is backed by **Google**, this means that we have a wealth of resources available to learn and develop our projects. [Go official website](https://go.dev/)
 
 ## **Hello world in Go**
 
@@ -45,7 +45,7 @@ Go, being a multipurpose language, has a variety of use cases in which it excels
 * **Cloud and network services**
 * **CLI (Command Line Interface)**
 * **Web development**
-* **DevOps y SRE**
+* **DevOps and SRE**
 
 ## **Go has a pet!**
 
