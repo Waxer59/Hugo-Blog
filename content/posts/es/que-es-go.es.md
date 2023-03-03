@@ -13,7 +13,7 @@ draft: false
 ## **Hola mundo en Go**
 
 Para crear nuestro hola mundo lo primero que deberemos de hacer es crear nuestro fichero con la extension **.go**, para seguidamente
-insertar dentro de este el siguiente codigo: 
+insertar dentro de este el siguiente código: 
 
 ```go
 package main
@@ -25,13 +25,13 @@ func main() {
 }
 ```
 
-Para probar este codigo deberemos de tener instalado Go en nuestra maquina y ejecutar el siguiente comando: 
+Para probar este código deberemos de tener instalado Go en nuestra maquina y ejecutar el siguiente comando: 
 
 ```powershell
 go run <ruta-a-tu-fichero>
 ```
 
-### **¡Analizemos un poco el codigo!**
+### **¡Analicemos un poco el código!**
 
 * ***1º***: Indicamos que este programa es ejecutable y no un paquete utilizado por otros programas con la linea 1 en "**package main**".
 * ***2º***: Importamos la biblioteca "**fmt**" en la linea 3 en " **import "fmt"**" para poder usar la función de imprimir en consola.
@@ -55,7 +55,7 @@ Como puedes ver en el título, el lenguaje de programación **Go** tiene una mas
 
 ## **Conclusión**
 
-En conclusión Go es un excelente lenguaje de programación de lado del servidor, este nos ofrece una combinacion perfecta como: sencillez, comodidad y eficacia. Además de poseer una gran y creciente relevancia en el mundo de la programación *backend*, teniendo este una gran comunidad y estando respaldado por una gran compañia como es **Google**.
+En conclusión Go es un excelente lenguaje de programación de lado del servidor, este nos ofrece una combinación perfecta como: sencillez, comodidad y eficacia. Además de poseer una gran y creciente relevancia en el mundo de la programación *backend*, teniendo este una gran comunidad y estando respaldado por una gran compañía como es **Google**.
 
 Es por ello que si estás considerando utilizar Go para tus proyectos en el servidor, te recomiendo altamente darle una oportunidad y probarlo.
 

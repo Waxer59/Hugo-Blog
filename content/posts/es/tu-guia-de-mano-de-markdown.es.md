@@ -1,5 +1,5 @@
 ---
-title: 'Tu guia de mano de Markdown'
+title: 'Tu guía de mano de Markdown'
 date: 2023-01-26
 readTime: '15 minutos de lectura'
 technology: 'markdown'
@@ -14,13 +14,13 @@ Esto convierte a Markdown en una herramienta importante de conocer y usar dada a
 
 ## **¡Vamos a ello!**
 
-Lo primero que temenos que conocer para empezar es que Markdown usa la extension **.md** para crear documentos.
+Lo primero que tenemos que conocer para empezar es que Markdown usa la extension **.md** para crear documentos.
 
 Ahora que conocemos lo básico, podemos comenzar a explicar cómo utilizarlo.
 
 ### Encabezados
 
-Markdown usa el operador *( # )* para definir un encabezado. Pero esto no se queda aqui y es que la concatenacion de este operador nos permite ajustar el tamaño de este, existen seis tipos de tamaños siendo el primer tamaño *( 1 )* el mas grande y el sexto *( 6 )* el mas pequeño, comúnmente veremos a estos nombrados como ***h< tamaño >*** *( "h" hace referencia a la palabra inglesa "header" en español "encabezado" )*. [Enlace al ejemplo](https://www.digitalocean.com/community/markdown?md=%23+Soy+un+encabezado+h1%0A%23%23+Soy+un+encabezado+h2%0A%23%23%23+Soy+un+encabezado+h3%0A%23%23%23%23+Soy+un+encabezado+h4%0A%23%23%23%23%23+Soy+un+encabezado+h5%0A%23%23%23%23%23%23+Soy+un+encabezado+h6)
+Markdown usa el operador *( # )* para definir un encabezado. Pero esto no se queda aquí y es que la concatenación de este operador nos permite ajustar el tamaño de este, existen seis tipos de tamaños siendo el primer tamaño *( 1 )* el mas grande y el sexto *( 6 )* el mas pequeño, comúnmente veremos a estos nombrados como ***h< tamaño >*** *( "h" hace referencia a la palabra inglesa "header" en español "encabezado" )*. [Enlace al ejemplo](https://www.digitalocean.com/community/markdown?md=%23+Soy+un+encabezado+h1%0A%23%23+Soy+un+encabezado+h2%0A%23%23%23+Soy+un+encabezado+h3%0A%23%23%23%23+Soy+un+encabezado+h4%0A%23%23%23%23%23+Soy+un+encabezado+h5%0A%23%23%23%23%23%23+Soy+un+encabezado+h6)
 
 ```markdown
 # Soy un encabezado h1
@@ -31,17 +31,17 @@ Markdown usa el operador *( # )* para definir un encabezado. Pero esto no se que
 ###### Soy un encabezado h6
 ```
 
-## Parrafos , decoradores de texto y sepadarodes
+## Párrafos , decoradores de texto y separadores
 
-### Parafos
+### Párrafos
 
-En Markdown para escribir parrafos no hay que hacer uso de ningún operador, y para separar entre parrafos
-solamente debemos de dejar un espacio en blaco entre estos dos. [Enlace al ejemplo](https://www.digitalocean.com/community/markdown?md=Soy+un+parrafo%21%0A%0ASoy+otro+parrafo%21)
+En Markdown para escribir párrafos no hay que hacer uso de ningún operador, y para separar entre párrafos
+solamente debemos de dejar un espacio en blanco entre estos dos. [Enlace al ejemplo](https://www.digitalocean.com/community/markdown?md=Soy+un+parrafo%21%0A%0ASoy+otro+parrafo%21)
 
 ```markdown
-Soy un parrafo!
+Soy un párrafo!
 
-Soy otro parrafo!
+Soy otro párrafo!
 
 ```
 ### Decoradores
@@ -79,9 +79,9 @@ ___
 
 > Cualquier forma es valida **¡usa la que mas te guste!**
 
-## Enlaces e imagenes
+## Enlaces e imágenes
 
-En Markdown la aserción de imagenes y de enlaces es bastante similar por ellos estas dos estan juntas. En el siguiente ejemplo te muestro como insertar imagenes y enlaces. [Enlace al ejemplo](https://www.digitalocean.com/community/markdown?md=%5BSoy+un+enlace+a+google%5D%28https%3A%2F%2Fwww.google.es%2F%29%0A%21%5BSoy+una+imagen+de+una+cascada%5D%28https%3A%2F%2Fimages.unsplash.com%2Fphoto-1544519954-6aeb4816f0ab%3Fixlib%3Drb-4.0.3%26ixid%3DMnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8%26auto%3Dformat%26fit%3Dcrop%26w%3D1974%26q%3D80%29)
+En Markdown la aserción de imágenes y de enlaces es bastante similar por ellos estas dos están juntas. En el siguiente ejemplo te muestro como insertar imágenes y enlaces. [Enlace al ejemplo](https://www.digitalocean.com/community/markdown?md=%5BSoy+un+enlace+a+google%5D%28https%3A%2F%2Fwww.google.es%2F%29%0A%21%5BSoy+una+imagen+de+una+cascada%5D%28https%3A%2F%2Fimages.unsplash.com%2Fphoto-1544519954-6aeb4816f0ab%3Fixlib%3Drb-4.0.3%26ixid%3DMnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8%26auto%3Dformat%26fit%3Dcrop%26w%3D1974%26q%3D80%29)
 
 ```markdown
 [Soy un enlace a google](https://www.google.es/)
@@ -138,9 +138,9 @@ Las listas de tareas se definen de la siguiente forma. [Enlace al ejemplo](https
 - [ ] Wadev
 ```
 
-## Bloques de codigo
+## Bloques de código
 
-Markdown tambien nos permite la aserción de bloques de codigo en nuestro documento, resaltando este si le indicamos el lenguaje, **¡te muestro como!**. [Enlace al ejemplo](https://www.digitalocean.com/community/markdown?md=%60%60%60+javascript%0Aconsole.log%28%22Hola+mundo%21%22%29%0A%60%60%60)
+Markdown también nos permite la aserción de bloques de código en nuestro documento, resaltando este si le indicamos el lenguaje, **¡te muestro como!**. [Enlace al ejemplo](https://www.digitalocean.com/community/markdown?md=%60%60%60+javascript%0Aconsole.log%28%22Hola+mundo%21%22%29%0A%60%60%60)
 
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-markdown" data-lang="markdown"><span class="line"><span class="cl">´´´javascript
 </span></span><span class="line"><span class="cl">console.log("Hola mundo!")
@@ -158,7 +158,7 @@ Las tablas se definen de la siguiente forma. [Enlace al ejemplo](https://www.dig
 | Fila2Columna1 | Fila2Columna2 |
 ```
 
-> **IMPORTANTE**. Las lineas que hacen la separación entre el de cada columna y las filas que es estan debajo de este ***( |---------------| )*** este por que 
+> **IMPORTANTE**. Las lineas que hacen la separación entre el de cada columna y las filas que es están debajo de este ***( |---------------| )*** este por que 
 > si no es asi Markdown no detectará que es una tabla lo que estas poniendo.
 
 ## Citas

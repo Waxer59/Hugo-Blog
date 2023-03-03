@@ -81,21 +81,19 @@ Here we can observe that we can access perfectly to the variable inside our bloc
 
 ### Third example
 
-So far we have understood that using **let** to declare a variable within a block we can only access it within that block, but what would happen if we declare our variable using **let** that is declared above that block? Would it print its content or would we get an error saying that it has not been found? [Link to example](https://dinamicjs.netlify.app/bGV0IGZ1bGxuYW1lID0gJ0pob24gRG9lJzsNCg0KZnVuY3Rpb24gc2FsdXRlKCkgew0KICBjb25zb2xlLmxvZyhmdWxsbmFtZSk7IC8vIEpob24gRG9lDQp9DQoNCnNhbHV0ZSgpOw==)
+So far we have understood that using **let** to declare a variable within a block we can only access it within that block, but what would happen if we declare our variable using **let** that is declared above that block? Would it print its content or would we get an error saying that it has not been found? [Link to example](https://dinamicjs.netlify.app/bGV0IGZ1bGxuYW1lID0gJ0pvaG4gRG9lJzsNCg0KZnVuY3Rpb24gc2FsdXRlKCkgew0KICBjb25zb2xlLmxvZyhmdWxsbmFtZSk7IC8vIEpvaG4gRG9lDQp9DQoNCnNhbHV0ZSgpOw==)
 
 ```javascript
-let fullname = 'Jhon Doe';
+let fullname = 'John Doe';
 
 function salute() {
-  console.log(fullname); // Jhon Doe
+  console.log(fullname); // John Doe
 }
 
 salute();
 ```
 
 As we have been able to see the answer would be **YES** it would print the content of this, since being in a higher level than the block where we want to call this has a greater scope and can be accessed by all the blocks that are in a level **inferior** to the declaration of this.
-
-Because when it is being called in a **inferior superior** level than the one where it is declared, it can be accessed by all the blocks that are in a **inferior** level.
 
 ## Using **const** to declare a variable
 

@@ -1,5 +1,5 @@
 ---
-title: 'Introduccion a Hugo'
+title: 'Introducción a Hugo'
 date: 2023-01-10
 readTime: 'X minutos de lectura'
 technology: 'hugo'
