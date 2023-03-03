@@ -7,7 +7,7 @@
     "build": "hugo --minify",
     "dev": "hugo server -D",
     "preview": "hugo serve",
-    "tailwind:build": "npx tailwindcss -i ./main.css -o ./assets/styles/tyle.css",
+    "tailwind:build": "npx tailwindcss -i ./main.css -o ./assets/styles/style.css",
     "tailwind:watch": "npx tailwindcss -i ./main.css -o ./assets/styles/style.css --watch",
     "lint": "eslint \"*.{js,hmtl,md}\" --fix",
     "format": "prettier --write \"./**/*.{js,md,html,css}\""

@@ -1353,6 +1353,10 @@ input:checked + .toggle-bg {
   gap: 1rem !important;
 }
 
+.gap-\[10px\] {
+  gap: 10px !important;
+}
+
 .gap-x-5 {
   -moz-column-gap: 1.25rem !important;
        column-gap: 1.25rem !important;

@@ -44,7 +44,7 @@ y fuera de ese bloque dicha variable no existirá. **¡Aclaremos esto con varios
 
 ### Primer ejemplo
 
-Aquí tenemos el mismo primer ejemplo mostrado con **var** y que al sustituirla por **let** nuestro programa seguirá funcionando igual a lo esperado [enlace al ejemplo](https://dinamicjs.netlify.app/bGV0IGZvbyA9ICJIZWxsbyEiDQpmb28gPSA0Mg0KZm9vID0gdHJ1ZQ0KZm9vID0gWyJIZWxsbyIsICJXb3JsZCJdDQpmb28gPSB7DQogICAgSGVsbG86ICJNb20iDQp9).
+Aquí tenemos el mismo primer ejemplo mostrado con **var** y que al sustituirla por **let** nuestro programa seguirá funcionando según lo esperado [enlace al ejemplo](https://dinamicjs.netlify.app/bGV0IGZvbyA9ICJIZWxsbyEiDQpmb28gPSA0Mg0KZm9vID0gdHJ1ZQ0KZm9vID0gWyJIZWxsbyIsICJXb3JsZCJdDQpmb28gPSB7DQogICAgSGVsbG86ICJNb20iDQp9).
 
 ```javascript
 let foo = 'Hello!';

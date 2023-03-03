@@ -1,0 +1,5 @@
+<h{{ .Level }} class="flex justify-center gap-[10px] items-center" id="{{ .Anchor | safeURL }}">{{ .Text | safeHTML }}
+    <a href="#{{ .Anchor | safeURL }}">
+        <i class="fa-solid fa-link"></i>
+    </a>
+</h{{ .Level }}>
