@@ -1,9 +1,9 @@
 ---
 title: 'SOLID principles'
-date: 2023-02-13
+date: 2023-03-04
 readTime: '15 minutes to read'
 technology: 'offtopic'
-draft: true
+draft: false
 ---
 
 You've probably heard of SOLID if you've been in software development these past few years. SOLID is an acronym

@@ -1,9 +1,9 @@
 ---
 title: 'Principios SOLID'
-date: 2023-02-14
+date: 2023-03-04
 readTime: '15 minutos de lectura'
 technology: 'offtopic'
-draft: true
+draft: false
 ---
 
 Seguramente habrás escuchado hablar de SOLID si has estado en el desarrollo de software estos últimos años. SOLID es un acrónimo
