@@ -1575,6 +1575,22 @@ input:checked + .toggle-bg {
   padding-top: 0.5rem !important;
 }
 
+.pb-14 {
+  padding-bottom: 3.5rem !important;
+}
+
+.pb-16 {
+  padding-bottom: 4rem !important;
+}
+
+.pb-20 {
+  padding-bottom: 5rem !important;
+}
+
+.pb-28 {
+  padding-bottom: 7rem !important;
+}
+
 .text-center {
   text-align: center !important;
 }
