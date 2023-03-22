@@ -1,13 +1,7 @@
 {{ define "main" }}
-<article class="pb-12 w-4/5 mx-auto">
+<article id="article" class="pb-12 w-4/5 mx-auto">
   <header class="flex items-center justify-between mb-8">
-    <a
-      href=""
-      id="backToHomeBtn"
-      class="absolute hidden sm:block hover:-translate-x-5 transition-transform duration-500 ease"
-      ><i class="fa-solid fa-chevron-left"></i>&nbsp; {{ i18n "backButtonText" .
-      }}</a
-    >
+    {{ partial "backToHome.html" . }}
     <div class="flex flex-col mx-auto items-center">
       <h2 class="text-center my-10 text-6xl mb-2 max-w-[500px] text-[36px]">{{ .Title }}</h2>
       <span class="opacity-50">{{.Params.readTime}}</span>
@@ -30,11 +24,4 @@
     </footer>
   </main>
 </article>
-
-<script defer>
-  const backToHomeBtn = document.querySelector('#backToHomeBtn');
-  backToHomeBtn.href = `${window.location.origin}/${
-    window.location.pathname.split('/')[1]
-  }/`;
-</script>
 {{ end }}

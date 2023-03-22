@@ -16,7 +16,7 @@ enableRobotsTXT = true
 unsafe= true
 
 [outputs]
-    home = [ "HTML", "JSON", "RSS"]
+    home = [ "HTML", "JSON", "RSS", "Algolia"]
 
 [languages]
   [languages.en]
@@ -33,3 +33,13 @@ unsafe= true
 [markup]
   [markup.highlight]
     noClasses=false
+
+[outputFormats.Algolia]
+baseName = "algolia"
+isPlainText = true
+mediaType = "application/json"
+notAlternative = true
+
+[params.algolia]
+vars = ["title", "summary", "date", "publishdate", "permalink"]
+params = ["tags"]
