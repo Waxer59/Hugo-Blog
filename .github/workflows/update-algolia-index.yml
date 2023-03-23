@@ -15,7 +15,7 @@ jobs:
         run: yarn
 
       - name: Build the site
-        run: yarn Build
+        run: yarn build
 
       - name: run update script
         run: yarn algolia:update
