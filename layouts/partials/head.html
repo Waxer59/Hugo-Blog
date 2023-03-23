@@ -33,7 +33,7 @@
   <script src="https://unpkg.com/flowbite@1.6.1/dist/flowbite.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/algoliasearch@4.5.1/dist/algoliasearch-lite.umd.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/instantsearch.js@4.8.3/dist/instantsearch.production.min.js"></script>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/instantsearch.css@7.4.5/themes/satellite-min.css">
+  <link rel="stylesheet" preload href="https://cdn.jsdelivr.net/npm/instantsearch.css@7.4.5/themes/satellite-min.css">
 
   {{ $themeMode := resources.Get "js/themeMode.js" }}
   <script defer src="{{ $themeMode.RelPermalink }}"></script>
