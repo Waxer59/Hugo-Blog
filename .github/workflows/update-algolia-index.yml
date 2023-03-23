@@ -12,13 +12,13 @@ jobs:
         uses: actions/checkout@v2
       
       - name: Install deps
-        uses: yarn
+        run: yarn
 
       - name: Build the site
-        uses: yarn Build
+        run: yarn Build
 
       - name: run update script
-        uses: yarn algolia:update
+        run: yarn algolia:update
         env:
           ALGOLIA_APPLICATION_ID: ${{ secrets.ALGOLIA_APPLICATION_ID }}
           ALGOLIA_ADMIN_API_KEY: ${{ secrets.ALGOLIA_ADMIN_API_KEY }}
