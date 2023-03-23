@@ -1,10 +1,9 @@
 name: "Update Algolia Index"
 
-on: 
+on:
   push:
     branches:
-      - "main"
-
+      - 'main'
 jobs:
   update-index:
     runs-on: ubuntu-22.04
