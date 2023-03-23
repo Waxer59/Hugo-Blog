@@ -1,15 +1,18 @@
 const ALGOLIA_APPLICATION_ID = 'IQDYVZHSJ1';
 const ALGOLIA_SEARCH_API_KEY = '8c01ff14ce05785074f6c4f038fdcc23';
+const ALGOLIA_INDEX_NAME = 'prod_blog.wadev.dev';
 const lang = window.location.pathname.replaceAll('/', '');
-
+const timeout = 1000;
 const searchPlaceholder = lang === 'es' ? 'Buscar...' : 'Search...';
 const emptyPlaceholder =
   lang === 'es' ? 'Sin resultados :-(' : 'No results :-(';
-
 const algoliaClient = algoliasearch(
   ALGOLIA_APPLICATION_ID,
-  ALGOLIA_SEARCH_API_KEY
+  ALGOLIA_SEARCH_API_KEY,
+  ALGOLIA_INDEX_NAME
 );
+
+let timerId;
 
 const search = instantsearch({
   indexName: 'prod_blog.wadev.dev',
@@ -36,7 +39,12 @@ search.addWidgets([
       form: 'bg-transparent'
     },
     showReset: true,
-    showLoadingIndicator: false
+    showLoadingIndicator: false,
+    autofocus: false,
+    queryHook(query, refine) {
+      clearTimeout(timerId);
+      timerId = setTimeout(() => refine(query), timeout);
+    }
   }),
 
   instantsearch.widgets.hits({
