@@ -1,7 +1,7 @@
 {
   "name": "wadev-blog",
   "version": "1.0.0",
-  "type": "module",
+  "type": "commonjs",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -11,16 +11,20 @@
     "tailwind:build": "npx tailwindcss -i ./main.css -o ./assets/styles/style.css",
     "tailwind:watch": "npx tailwindcss -i ./main.css -o ./assets/styles/style.css --watch",
     "lint": "eslint \"*.{js,hmtl,md}\" --fix",
-    "format": "prettier --write \"./**/*.{js,md,html,css}\""
+    "format": "prettier --write \"./**/*.{js,md,html,css}\"",
+    "algolia:update": "node ./scripts/read-rss-and-send-to-algolia"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "algoliasearch": "^4.16.0",
     "flowbite": "^1.6.1",
-    "hugo-bin": "^0.101.3"
+    "hugo-bin": "^0.101.3",
+    "xml2json": "^0.12.0"
   },
   "devDependencies": {
+    "dotenv": "^16.0.3",
     "eslint": "^8.31.0",
     "eslint-config-prettier": "^8.6.0",
     "eslint-config-standard": "^17.0.0",

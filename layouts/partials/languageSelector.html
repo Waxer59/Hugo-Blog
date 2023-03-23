@@ -1,40 +1,18 @@
-<button
-  id="dropdownDefaultButton"
-  data-dropdown-toggle="dropdown"
+<button id="dropdownDefaultButton" data-dropdown-toggle="dropdown"
   class="text-dark dark:text-white bg-secondary-color font-medium rounded-lg text-sm px-4 py-2.5 text-center inline-flex items-center"
   type="button">
-  {{ upper $.Site.Language }}<svg
-    class="w-4 h-4 ml-2"
-    aria-hidden="true"
-    fill="none"
-    stroke="currentColor"
-    viewBox="0 0 24 24"
-    xmlns="http://www.w3.org/2000/svg">
-    <path
-      stroke-linecap="round"
-      stroke-linejoin="round"
-      stroke-width="2"
-      d="M19 9l-7 7-7-7"></path>
+  {{ upper $.Site.Language }}<svg class="w-4 h-4 ml-2" aria-hidden="true" fill="none" stroke="currentColor"
+    viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
   </svg>
 </button>
 {{ range $.Site.Home.AllTranslations }} {{ if not (eq .Lang $.Lang) }} {{
 $accordLink := .Permalink }}
 <div id="dropdown" class="dropdown z-10 hidden bg-primary-color rounded shadow">
-  <div
-    class="text-sm text-gray-700 dark:text-gray-200"
-    aria-labelledby="dropdownDefaultButton">
+  <div class="text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownDefaultButton">
     <a href="{{ $accordLink }}" class="block py-2 px-8 lenguageSelection">
       {{ upper .Language.LanguageName }}
     </a>
   </div>
 </div>
 {{ end }} {{ end }}
-<style>
-  .dropdown {
-    margin-top: 3px !important;
-  }
-
-  .dropdown ul li {
-    margin: 0 !important;
-  }
-</style>

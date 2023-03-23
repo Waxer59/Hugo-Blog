@@ -1,138 +1,62 @@
-const URLS = {
-  GET_POSTS_URL: `${
-    window.location.origin + window.location.pathname
-  }index.json`,
-  BASE_URL: `${window.location.origin}`
-};
-const searchElement = document.querySelectorAll('.search-navbar');
-const container = document.querySelector('#pageContent');
-const nextBtn = document.querySelector('#next-btn');
-const prevBtn = document.querySelector('#prev-btn');
-const paginationControlsContainer = document.querySelector(
-  '#paginationControlsContainer'
+const ALGOLIA_APPLICATION_ID = 'IQDYVZHSJ1';
+const ALGOLIA_SEARCH_API_KEY = '8c01ff14ce05785074f6c4f038fdcc23';
+const lang = window.location.pathname.replaceAll('/', '');
+
+const searchPlaceholder = lang === 'es' ? 'Buscar...' : 'Search...';
+const emptyPlaceholder =
+  lang === 'es' ? 'Sin resultados :-(' : 'No results :-(';
+
+const algoliaClient = algoliasearch(
+  ALGOLIA_APPLICATION_ID,
+  ALGOLIA_SEARCH_API_KEY
 );
 
-const urlSearchParams = new URLSearchParams(window.location.search);
-const params = Object.fromEntries(urlSearchParams.entries());
-const pageParam = params.page ? +params.page : 1;
-const ARTICLES_PER_PAGE = 10;
-let content = '';
+const search = instantsearch({
+  indexName: 'prod_blog.wadev.dev',
+  searchClient: algoliaClient,
+  searchFunction(helper) {
+    const hits = document.querySelector('#hits');
 
-async function fetchData(url) {
-  try {
-    let response = await fetch(url);
-    response = await response.json();
-    content = response;
-    return response;
-  } catch (error) {
-    console.error(error);
-  }
-}
-
-function mapArticlePost({ url, title, date, readTime, technology }) {
-  return `<a
-    class="text-center block bg-primary-color mt-11 max-w-[70vw] mx-auto rounded-lg transition-transform duration-500 ease hover:translate-x-5"
-    href="${url}">
-    <div class="shadow-lg flex flex-col gap-4 sm:gap-0 sm:flex-row justify-between items-center mx-auto py-4 px-4">
-      <img
-        src="${URLS.BASE_URL}/icons/${technology}.png"
-        alt="${technology} icon"
-        width="128"
-        height="128"
-        class="w-12" 
-        />
-        
-      <div class="flex justify-center flex-col">
-        <strong> ${title} </strong>
-          <time>${date.day} ${date.month} ${date.year}</time>
-          <span class="opacity-50">${readTime}</span>
-      </div>
-      
-      <i class="fa-solid fa-chevron-right ml-4 pl-auto"></i>
-      </div>
-      </a>`;
-}
-
-async function displayAllPosts() {
-  await fetchData(URLS.GET_POSTS_URL);
-  const totalPages = content.length / ARTICLES_PER_PAGE + 1;
-  if (pageParam > totalPages) {
-    window.location.href = window.location.origin + window.location.pathname;
-  }
-  if (pageParam + 1 < totalPages) {
-    nextBtn.classList.remove('hidden');
-    nextBtn.href =
-      window.location.origin +
-      window.location.pathname +
-      `?page=${pageParam + 1}`;
-  }
-  if (pageParam > 1) {
-    prevBtn.classList.remove('hidden');
-    prevBtn.href =
-      window.location.origin +
-      window.location.pathname +
-      `?page=${pageParam - 1}`;
-  }
-  if (
-    !prevBtn.classList.contains('hidden') ||
-    !nextBtn.classList.contains('hidden')
-  ) {
-    paginationControlsContainer.classList.remove('hidden');
-  }
-
-  container.innerHTML = '';
-  [...content]
-    .slice((pageParam - 1) * ARTICLES_PER_PAGE, pageParam * ARTICLES_PER_PAGE)
-    .forEach(({ url, title, date, content, readTime, technology }) => {
-      container.innerHTML += mapArticlePost({
-        url,
-        title,
-        date,
-        content,
-        readTime,
-        technology
-      });
-    });
-}
-if (
-  [...searchElement]?.every((el) => el.value.trim() === '') &&
-  window.location.pathname.split('/').length === 3
-) {
-  displayAllPosts();
-}
-
-searchElement.forEach((searchInput) => {
-  searchInput.addEventListener('input', async () => {
-    if (searchInput.value.length > 0) {
-      paginationControlsContainer.classList.add('hidden');
-    } else if (
-      !prevBtn.classList.contains('hidden') ||
-      !nextBtn.classList.contains('hidden')
-    ) {
-      paginationControlsContainer.classList.remove('hidden');
+    if (helper.state.query.trim() !== '') {
+      hits.classList.remove('hidden');
+      helper.search();
+    } else {
+      hits.classList.add('hidden');
     }
-    const filteredContent = [...content].filter((el) =>
-      el.title.toLowerCase().includes(searchInput?.value.toLowerCase())
-    );
-    container.innerHTML = '';
-    if (filteredContent.length <= 0) {
-      container.innerHTML += `
-      <p class="text-center p-[50px] text-5xl">
-      Nothing found :-(
-      </p>
-      `;
-    }
-    filteredContent.forEach(
-      ({ url, title, date, content, readTime, technology }) => {
-        container.innerHTML += mapArticlePost({
-          url,
-          title,
-          date,
-          content,
-          readTime,
-          technology
-        });
-      }
-    );
-  });
+  }
 });
+
+search.addWidgets([
+  instantsearch.widgets.searchBox({
+    container: '#searchbox',
+    placeholder: searchPlaceholder,
+    cssClasses: {
+      input:
+        'shadow-none block w-full p-2 pl-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-secondary-color focus:border-secondary-color dark:bg-primary-color dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-secondary-color dark:focus:border-secondary-color',
+      form: 'bg-transparent'
+    },
+    showReset: true,
+    showLoadingIndicator: false
+  }),
+
+  instantsearch.widgets.hits({
+    container: '#hits',
+    templates: {
+      empty: emptyPlaceholder,
+      item: `<a href="{{ link }}" class="bg-primary-color text-white p-6 shadow-lg w-full text-center rounded-lg">
+        {{ title }}
+        </a>`
+    },
+    cssClasses: {
+      item: 'bg-transparent shadow-none p-0',
+      emptyRoot:
+        'bg-primary-color text-white p-6 shadow-lg w-full text-center rounded-lg'
+    }
+  }),
+
+  instantsearch.widgets.configure({
+    hitsPerPage: 3
+  })
+]);
+
+search.start();

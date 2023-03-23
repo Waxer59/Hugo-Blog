@@ -1,6 +1,10 @@
 {{ define "main" }}
 <main id="main-content">
   <h2 class="text-center mt-8">{{ i18n "postsTitle" . }}</h2>
-  <div id="pageContent" class="mb-10 mx-auto max-w-[800px]"></div>
+  <div id="pageContent" class="mb-10 mx-auto max-w-[800px]">
+    {{- range where site.RegularPages "Type" "in" site.Params.mainSections -}}
+    {{- partial "li.html" (dict "url" .Permalink "title" .Title "date" (dict "day" .Date.Day "month" (i18n .Date.Month) "year" .Date.Year) "readTime" .Params.readTime "technology" .Params.technology) -}}
+    {{- end -}}
+  </div>
 </main>
 {{ end }}
