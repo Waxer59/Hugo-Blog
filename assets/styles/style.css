@@ -1936,12 +1936,20 @@ input:checked + .toggle-bg {
     display: block !important;
   }
 
+  .sm\:flex {
+    display: flex !important;
+  }
+
   .sm\:h-9 {
     height: 2.25rem !important;
   }
 
   .sm\:flex-row {
     flex-direction: row !important;
+  }
+
+  .sm\:flex-col {
+    flex-direction: column !important;
   }
 
   .sm\:gap-0 {
