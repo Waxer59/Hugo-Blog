@@ -3,38 +3,37 @@
 @tailwind utilities;
 
 @layer components {
-
-  @keyframes fade-in {
+  @keyframes grow-x {
     from {
-      opacity: 0;
+      transform: scaleX(0);
     }
-  }
-
-  @keyframes fade-out {
     to {
-      opacity: 0;
+      transform: scaleX(1);
     }
   }
-
-  @keyframes slide-from-right {
+  
+  @keyframes shrink-x {
     from {
-      transform: translateX(30px);
+      transform: scaleX(1);
     }
-  }
-
-  @keyframes slide-to-left {
     to {
-      transform: translateX(-30px);
+      transform: scaleX(0);
     }
   }
-
-  ::view-transition-old(root) {
-    animation: 90ms cubic-bezier(0.4, 0, 1, 1) both fade-out,
-      300ms cubic-bezier(0.4, 0, 0.2, 1) both slide-to-left;
+  
+  ::view-transition-old(figure-caption),
+  ::view-transition-new(figure-caption) {
+    height: auto;
+    right: 0;
+    left: auto;
+    transform-origin: right center;
   }
-
-  ::view-transition-new(root) {
-    animation: 210ms cubic-bezier(0, 0, 0.2, 1) 90ms both fade-in,
-      300ms cubic-bezier(0.4, 0, 0.2, 1) both slide-from-right;
+  
+  ::view-transition-old(figure-caption) {
+    animation: 0.25s linear both shrink-x;
+  }
+  
+  ::view-transition-new(figure-caption) {
+    animation: 0.25s 0.25s linear both grow-x;
   }
 }

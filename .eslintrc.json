@@ -10,6 +10,7 @@
     "sourceType": "module"
   },
   "rules": {
-    "n/no-callback-literal": "off"
+    "n/no-callback-literal": "off",
+    "no-undef": "off"
   }
 }

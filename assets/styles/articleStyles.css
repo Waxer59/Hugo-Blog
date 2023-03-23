@@ -200,3 +200,11 @@ article main a:not(:has(img)) {
   opacity: 0.65 !important;
   text-decoration: underline !important;
 }
+
+.dropdown {
+  margin-top: 3px !important;
+}
+
+.dropdown ul li {
+  margin: 0 !important;
+}
