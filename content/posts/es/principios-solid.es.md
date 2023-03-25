@@ -334,7 +334,7 @@ Esto significa que los módulos de alto nivel deben depender de abstracciones o 
 
 Supongamos dos clases: una llamada **Database** que implemente la interfaz **IDatabase**, y una segunda llamada **UserService** que posea el método **createUser()**
 
-Al implementar la interfaz **IDatabase** en la clase donde realizaremos todas las operaciones de la base de datos, estamos desacoplando la lógica de la base de datos de la clase UserService. Esto significa que si en el futuro se cambia la base de datos, el resto del sistema no se verá afectado por este cambio."
+Al implementar la interfaz **IDatabase** en la clase donde realizaremos todas las operaciones de la base de datos, estamos desacoplando la lógica de la base de datos de la clase UserService. Esto significa que si en el futuro se cambia la base de datos, el resto del sistema no se verá afectado por este cambio.
 
 ```typescript
 interface IDatabase {
