@@ -4,6 +4,7 @@ title = 'Wadev - Blog'
 defaultContentLanguageInSubdir = true
 defaultContentLanguage = "en"
 enableRobotsTXT = true
+paginate = 10
 
 [params]
   author = "Wadev"
