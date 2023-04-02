@@ -38,5 +38,10 @@
   {{ $themeMode := resources.Get "js/themeMode.js" }}
   <script defer src="{{ $themeMode.RelPermalink }}"></script>
 
+  {{ if not .IsHome }}
+  {{ $progressBar := resources.Get "js/progressBar.js" }}
+  <script defer src="{{ $progressBar.RelPermalink }}"></script>
+  {{ end }}
+
   <link rel="icon" type="image/x-icon" href="/favicon/favicon.ico?" />
 </head>
