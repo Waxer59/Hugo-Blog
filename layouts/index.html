@@ -1,10 +1,22 @@
 {{ define "main" }}
+{{ $paginator := .Paginator }}
 <main id="main-content">
   <h2 class="text-center mt-8">{{ i18n "postsTitle" . }}</h2>
   <div id="pageContent" class="mb-10 mx-auto max-w-[800px]">
-    {{- range where site.RegularPages "Type" "in" site.Params.mainSections -}}
-    {{- partial "li.html" (dict "url" .Permalink "title" .Title "date" (dict "day" .Date.Day "month" (i18n .Date.Month) "year" .Date.Year) "readTime" .Params.readTime "technology" .Params.technology) -}}
-    {{- end -}}
+    {{ range $paginator.Pages }}
+    {{- partial "li.html" (dict "url" .Permalink "title" .Title "date" (dict "day" .Date.Day "month" (i18n .Date.Month)
+    "year" .Date.Year) "readTime" .Params.readTime "technology" .Params.technology) -}}
+    {{ end }}
+  </div>
+  <div class="p-[20px] flex justify-evenly text-center ">
+    {{ if $paginator.HasPrev }}
+    <a class="transition-transform duration-500 ease hover:-translate-x-5 cursor-pointer"
+      href="{{ $paginator.Prev.URL }}"><i class="fa-solid fa-arrow-left"></i>&nbsp;&nbsp;Prev</a>
+    {{ end }}
+    {{ if $paginator.HasNext }}
+    <a class="transition-transform duration-500 ease hover:translate-x-5 cursor-pointer"
+      href="{{ $paginator.Next.URL }}">Next&nbsp;&nbsp;<i class="fa-solid fa-arrow-right"></i></a>
+    {{ end }}
   </div>
 </main>
 {{ end }}
