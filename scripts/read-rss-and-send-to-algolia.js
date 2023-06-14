@@ -11,7 +11,7 @@ const ALGOLIA_INDEX_NAME = process.env.ALGOLIA_INDEX_NAME;
 
 const createRssAndSearchToAlgolia = (lang = '') => {
   const rss = fs.readFileSync(
-    path.resolve(__dirname, `../public${lang === 'en' ? '/' : `/${lang}`}index.xml`),
+    path.resolve(__dirname, `../public${lang === 'en' ? '/' : `/${lang}/`}index.xml`),
     'utf-8'
   );
 
