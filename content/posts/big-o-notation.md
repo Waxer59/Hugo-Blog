@@ -12,7 +12,7 @@ The **Big O Notation** is a way to describe the performance or complexity of an 
 
 The **Big O Notation** is represented using the letter _"O"_ followed by a function that describes the relationship between the problem size and the amount of resources used. The variable __"n"__ represents the number of operations performed by the algorithm.
 
-![Explanation of how the big o notation works](/images/postsImages/bigOExplanation.jpg)
+[![Explanation of how the big o notation works](/images/postsImages/bigOExplanation.jpg)](/images/postsImages/bigOExplanation.jpg)
 
 <p class="text-center italic">
 Illustration from the book <a href="https://codewithmeg.com/grokking.html" target="_blank">
@@ -54,7 +54,7 @@ This complexity is commonly found in efficient sorting algorithms like **Quickso
 
 #### Let's take a look at a graph to see how these types of notations are represented!
 
-![Graph of big o notation](/images/postsImages/bigOGraphic.jpeg)
+[![Graph of big o notation](/images/postsImages/bigOGraphic.jpg)](/images/postsImages/bigOGraphic.jpg)
 <p class="text-center italic">
 Graph from the book <a href="https://codewithmeg.com/grokking.html" target="_blank">
 "grokking algorithms"

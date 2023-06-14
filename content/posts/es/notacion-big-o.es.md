@@ -12,7 +12,7 @@ La **Notación Big O** o **Big O Notation** es una forma de describir el rendimi
 
 La **Notación Big O** se representa usando la letra _"O"_ seguida de una función que describe la relación entre el tamaño del problema y la cantidad de recursos utilizados. Siendo la __"n"__ el numero de operaciones realizadas en dicho algoritmo.
 
-![Explicación sobre el funcionamiento de la notación big o](/images/postsImages/bigOExplanation.jpg)
+[![Explicación sobre el funcionamiento de la notación big o](/images/postsImages/bigOExplanation.jpg)](/images/postsImages/bigOExplanation.jpg))
 
 <p class="text-center italic">
 Ilustración del libro <a href="https://codewithmeg.com/grokking.html" target="_blank">
@@ -61,7 +61,7 @@ Es común encontrar esta complejidad en algoritmos de ordenación eficientes, co
 
 #### ¡Veamos una gráfica para ver como se representan estos tipos de notación!
 
-![Gráfica de la notación big o](/images/postsImages/bigOGraphic.jpeg)
+[![Gráfica de la notación big o](/images/postsImages/bigOGraphic.jpg)](/images/postsImages/bigOGraphic.jpg)
 <p class="text-center italic">
 Gráfica del libro <a href="https://codewithmeg.com/grokking.html" target="_blank">
 "grokking algorithms"
