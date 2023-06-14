@@ -13,3 +13,7 @@ Mainly will talk about the technologies within the javascript environment either
 ```javascript
 console.log('Hello World!');
 ```
+
+```{.astro}
+console.log('Hello World!');
+```

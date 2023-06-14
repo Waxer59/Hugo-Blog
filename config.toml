@@ -1,7 +1,6 @@
 baseURL = '/'
 languageCode = 'en-us'
 title = 'Wadev - Blog'
-defaultContentLanguageInSubdir = true
 defaultContentLanguage = "en"
 enableRobotsTXT = true
 paginate = 10
@@ -23,17 +22,16 @@ unsafe= true
   [languages.en]
     contentDir = 'content'
     languageName = 'en'
-    [languages.en.params]
-      linkedin = '/'
+    weight = 1
   [languages.es]
     contentDir = 'content/es'
     languageName = 'es'
-    [languages.es.params]
-      linkedin = '/es'
+    weight = 2
 
 [markup]
   [markup.highlight]
-    noClasses=false
+    style = 'onedark'
+    guessSyntax = true
 
 [outputFormats.Algolia]
 baseName = "algolia"

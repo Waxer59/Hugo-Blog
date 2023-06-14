@@ -1,7 +1,6 @@
 {{ define "main"}}
-<main class="mt-8 max-w-[800px] mx-auto">
-  {{ partial "backToHome.html" . }}
+<main class="mt-28 flex flex-col item-center gap-4 w-[90%] mx-auto">
   <h1>{{ i18n "404PageTitle" . }}</h1>
-  <p class="mt-8 text-center">{{ i18n "404PageText" . }}</p>
+  <p class="text-center mx-auto max-w-lg">{{ i18n "404PageText" . }}</p>
 </main>
 {{ end }}
