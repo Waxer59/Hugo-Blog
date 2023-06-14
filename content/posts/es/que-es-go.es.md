@@ -27,7 +27,7 @@ func main() {
 
 Para probar este código deberemos de tener instalado Go en nuestra maquina y ejecutar el siguiente comando: 
 
-```powershell
+```bash
 go run <ruta-a-tu-fichero>
 ```
 

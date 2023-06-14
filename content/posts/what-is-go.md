@@ -27,7 +27,7 @@ func main() {
 
 To run this code we must have Go installed in our machine and execute the following command:
 
-```powershell
+```bash
 go run <path-to-your-file>
 ```
 

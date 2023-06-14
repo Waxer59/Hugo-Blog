@@ -181,6 +181,29 @@ code::before {
   top: -12px;
 }
 
+.language-bash::before {
+  background: url(../icons/bash.png);
+  width: 32px;
+  height: 32px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  content: '';
+  top: -12px;
+  right: 4px;
+}
+
+.astro pre code::before {
+  background: url(../icons/astro.png);
+  width: 32px;
+  height: 32px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  content: '';
+  border-radius: 5px;
+  right: 4px;
+  top: -12px;
+}
+
 ::-webkit-scrollbar {
   width: 10px;
 }

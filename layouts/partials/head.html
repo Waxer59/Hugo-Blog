@@ -26,8 +26,6 @@
   {{ $fontAwasome := resources.Get "styles/all.min.css" }}
   <link rel="stylesheet" href="{{ $fontAwasome.RelPermalink }}" />
 
-  <link rel="stylesheet" href="/syntax.css" />
-
   {{ $search := resources.Get "js/search.js" }}
   <script defer src="{{ $search.RelPermalink }}"></script>
   <script defer src="https://unpkg.com/flowbite@1.6.1/dist/flowbite.min.js"></script>
