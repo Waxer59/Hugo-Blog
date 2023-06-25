@@ -1,7 +1,6 @@
 ---
 title: '¿Que es docker?'
 date: 2023-02-05
-readTime: '20 minutos de lectura'
 technology: 'docker'
 draft: false
 ---

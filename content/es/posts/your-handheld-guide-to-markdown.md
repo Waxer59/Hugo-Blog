@@ -1,7 +1,6 @@
 ---
 title: 'Tu guía de mano de Markdown'
 date: 2023-01-26
-readTime: '15 minutos de lectura'
 technology: 'markdown'
 draft: false
 ---
