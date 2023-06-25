@@ -1,7 +1,6 @@
 ---
 title: 'SOLID principles'
 date: 2023-03-04
-readTime: '15 minutes to read'
 technology: 'offtopic'
 draft: false
 ---

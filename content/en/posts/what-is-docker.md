@@ -1,7 +1,6 @@
 ---
 title: 'What is docker?'
 date: 2023-02-05
-readTime: '20 minutes to read'
 technology: 'docker'
 draft: false
 ---

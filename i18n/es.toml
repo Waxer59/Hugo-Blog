@@ -19,6 +19,10 @@ other = "Pagina no encontrada :-("
 [404PageText]
 other = "No hemos encontrado lo que buscabas, pero tenemos algunos artículos maravillosos que estamos seguros que te encantarán. Seguro que te encantarán, tómate un descanso y vuelve cuando quieras."
 
+[estimatedTime]
+one = "{{ .Count }} minuto de lectura"
+other = "{{ .Count }} minutos de lectura"
+
 #* DATES
 
 [January]
