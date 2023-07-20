@@ -1,7 +1,6 @@
 ---
 title: '¿var, let o const?'
 date: 2023-01-19
-readTime: '15 minutos de lectura'
 technology: 'javascript'
 draft: false
 ---

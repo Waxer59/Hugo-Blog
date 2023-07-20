@@ -20,7 +20,7 @@ unsafe= true
 
 [languages]
   [languages.en]
-    contentDir = 'content'
+    contentDir = 'content/en'
     languageName = 'en'
     weight = 1
   [languages.es]

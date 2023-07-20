@@ -1,10 +1,8 @@
 <nav
   class="bg-primary-color border-gray-200 px-6 py-4 sm sm:px-4 sm:py-2.5 dark:bg-primary-colorborder-b">
-  {{ $flexDirection := "flex-col" }} {{ if not .Page.IsHome }} {{ $flexDirection
-  = "flex-row" }} {{ end }}
   <div
-    class="container flex flex-col {{ $flexDirection }} sm:flex-row gap-4 items-center justify-between mx-auto">
-    <a href="/{{ .Site.Language }}" class="flex items-center">
+    class="container flex flex-col sm:flex-row gap-4 items-center justify-between mx-auto">
+    <a href="{{.Site.Home.Permalink}}" class="flex items-center">
       <img
         src="/images/wadevIcon.png"
         class="h-6 mr-3 dark:invert sm:h-9 hover:scale-125 transition-transform duration-500 ease"

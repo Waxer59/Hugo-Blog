@@ -1,7 +1,6 @@
 ---
 title: 'Principios SOLID'
 date: 2023-03-04
-readTime: '15 minutos de lectura'
 technology: 'offtopic'
 draft: false
 ---

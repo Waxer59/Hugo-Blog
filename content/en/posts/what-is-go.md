@@ -1,7 +1,6 @@
 ---
 title: 'What is Go?'
 date: 2023-02-13
-readTime: '5 minutes to read'
 technology: 'go'
 draft: false
 ---
