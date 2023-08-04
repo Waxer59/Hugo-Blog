@@ -1962,10 +1962,6 @@ input:checked + .toggle-bg {
 }
 
 @media (min-width: 640px) {
-  .sm\:block {
-    display: block !important;
-  }
-
   .sm\:h-9 {
     height: 2.25rem !important;
   }
@@ -1997,5 +1993,15 @@ input:checked + .toggle-bg {
 @media (min-width: 768px) {
   .md\:order-2 {
     order: 2 !important;
+  }
+
+  .md\:block {
+    display: block !important;
+  }
+}
+
+@media (min-width: 1024px) {
+  .lg\:block {
+    display: block !important;
   }
 }

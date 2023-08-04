@@ -141,10 +141,11 @@ Las listas de tareas se definen de la siguiente forma. [Enlace al ejemplo](https
 
 Markdown también nos permite la aserción de bloques de código en nuestro documento, resaltando este si le indicamos el lenguaje, **¡te muestro como!**. [Enlace al ejemplo](https://www.digitalocean.com/community/markdown?md=%60%60%60+javascript%0Aconsole.log%28%22Hola+mundo%21%22%29%0A%60%60%60)
 
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-markdown" data-lang="markdown"><span class="line"><span class="cl">´´´javascript
-</span></span><span class="line"><span class="cl">console.log("Hola mundo!")
-</span></span><span class="line"><span class="cl">´´´
-</span></span></code></pre></div>
+```markdown
+´´´javascript
+console.log("Hello World!")
+´´´
+```
 
 ## Tablas
 
@@ -156,9 +157,6 @@ Las tablas se definen de la siguiente forma. [Enlace al ejemplo](https://www.dig
 | Fila1Columna1 | Fila1Columna2 |
 | Fila2Columna1 | Fila2Columna2 |
 ```
-
-> **IMPORTANTE**. Las lineas que hacen la separación entre el de cada columna y las filas que es están debajo de este ***( |---------------| )*** este por que 
-> si no es asi Markdown no detectará que es una tabla lo que estas poniendo.
 
 ## Citas
 
