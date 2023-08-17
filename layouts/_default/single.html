@@ -2,7 +2,7 @@
 <article class="pb-12 w-4/5 mx-auto">
   <div class="bg-primary-color h-1 shadow-sm fixed top-0 left-0 z-10" id="progressScrollBar">
   </div>
-  <header class="flex items-center justify-between mb-8">
+  <header class="flex items-center justify-between mb-8 relative">
     {{ partial "backToHome.html" . }}
     <div class="flex flex-col mx-auto items-center">
       <h2 class="text-center my-10 text-6xl mb-2 max-w-[500px] text-[36px]">{{ .Title }}</h2>
@@ -19,7 +19,7 @@
       {{ $editArticleUrl := .File.Path }}
       {{ $editArticleUrl = replace $editArticleUrl "\\" "/" }}
       <a
-        href="https://github.com/Waxer59/Wadev-Blog/tree/main/content/{{ $editArticleUrl }}"
+        href="https://github.com/Waxer59/Wadev-Blog/tree/main/content/{{.Lang}}/{{ $editArticleUrl }}"
         target="_blank"
         >{{ i18n "editArticleText" . }}&nbsp;<i class="fa-brands fa-github"></i
       ></a>

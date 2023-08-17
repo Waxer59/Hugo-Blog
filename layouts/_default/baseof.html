@@ -2,12 +2,18 @@
 <html lang="en">
 {{ partial "head.html" . }}
 
-<body class="dark:secondary-color dark:text-white bg-secondary-color">
+<body class="dark:secondary-color dark:text-white bg-secondary-color h-full">
   {{ partial "header.html" . }}
-  <div class="min-h-full relative">
-    <div class="pb-28">{{- block "main" . }}{{- end }}</div>
-    {{ partial "footer.html" . }}
+  <div class="flex flex-col justify-between h-full">
+    {{- block "main" . }}{{- end }}
+    <div class="flex flex-col gap-8 pt-3">
+      {{ if .IsHome }}
+        <div class="flex justify-evenly text-center">
+          {{ partial "paginator.html" . }}
+        </div>
+      {{ end }}
+      {{ partial "footer.html" . }}
+    </div>
   </div>
 </body>
-
 </html>
