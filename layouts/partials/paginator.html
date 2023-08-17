@@ -1,0 +1,10 @@
+{{ $paginator := .Paginator }}
+
+{{ if $paginator.HasPrev }}
+<a class="cursor-pointer"
+  href="{{ $paginator.Prev.URL }}"><i class="fa-solid fa-arrow-left"></i>&nbsp;&nbsp;Prev</a>
+{{ end }}
+{{ if $paginator.HasNext }}
+<a class="cursor-pointer"
+  href="{{ $paginator.Next.URL }}">Next&nbsp;&nbsp;<i class="fa-solid fa-arrow-right"></i></a>
+{{ end }}

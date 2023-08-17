@@ -22,7 +22,8 @@ const createRssAndSearchToAlgolia = (lang = '') => {
 
   const posts = json.rss.channel.item.map((post) => ({
     ...post,
-    objectID: post.guid
+    objectID: post.guid,
+    lang
   }));
 
   index
