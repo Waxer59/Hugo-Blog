@@ -48,7 +48,7 @@ Si el tamaño del problema se duplica, el tiempo de ejecución se incrementará 
 
 Por cada elemento adicional en el problema, el tiempo de ejecución se duplica. Los algoritmos con esta complejidad son considerados ineficientes y pueden volverse impracticables para tamaños de problemas moderadamente grandes. Se deben buscar alternativas más eficientes cuando se enfrenta a algoritmos con esta complejidad.
 
-* __O(!n)__: Indica que el tiempo de ejecución del algoritmo es factorial. Esto significa que el tiempo de ejecución aumenta de manera factorial con el tamaño del problema. 
+* __O(n!)__: Indica que el tiempo de ejecución del algoritmo es factorial. Esto significa que el tiempo de ejecución aumenta de manera factorial con el tamaño del problema. 
 
 La complejidad factorial es la peor de todas, ya que implica que el tiempo de ejecución crece de manera exponencial con cada elemento adicional. 
 
