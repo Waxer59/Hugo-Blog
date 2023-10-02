@@ -43,7 +43,7 @@ It is important to be cautious with this complexity, as it can lead to significa
 
 Algorithms with this complexity are considered inefficient and can become impractical for moderately large problem sizes. More efficient alternatives should be sought when dealing with algorithms of this complexity.
 
-* __O(!n)__: Indicates that the algorithm has factorial time complexity. This means that the execution time grows factorially with the problem size. 
+* __O(n!)__: Indicates that the algorithm has factorial time complexity. This means that the execution time grows factorially with the problem size. 
 
 Factorial complexity is the worst of all, as it implies that the execution time grows exponentially with each additional element. Algorithms with this complexity are extremely inefficient and generally not viable for moderate or large problem sizes. Alternative approaches or more efficient algorithms should be sought to solve this type of problem.
 
