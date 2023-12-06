@@ -141,11 +141,11 @@ Task lists are defined as follows. [Link to the example](https://www.digitalocea
 
 Markdown also allows us the assertion of code blocks in our document, highlighting it if we indicate the language, **I show you how!**. [Link to the example](https://www.digitalocean.com/community/markdown?md=%60%60%60+javascript%0Aconsole.log%28%22Hello+world%21%22%29%0A%60%60%60)
 
-```markdown
-´´´javascript
+````markdown
+```javascript
 console.log("Hello World!")
-´´´
 ```
+````
 
 ## Tables
 
