@@ -85,7 +85,6 @@ En Markdown la aserción de imágenes y de enlaces es bastante similar por ellos
 ```markdown
 [Soy un enlace a google](https://www.google.es/)
 ![Soy una imagen de una cascada](https://images.unsplash.com/photo-1544519954-6aeb4816f0ab?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1974&q=80)
-
 ```
 
 ## Listas
@@ -141,11 +140,11 @@ Las listas de tareas se definen de la siguiente forma. [Enlace al ejemplo](https
 
 Markdown también nos permite la aserción de bloques de código en nuestro documento, resaltando este si le indicamos el lenguaje, **¡te muestro como!**. [Enlace al ejemplo](https://www.digitalocean.com/community/markdown?md=%60%60%60+javascript%0Aconsole.log%28%22Hola+mundo%21%22%29%0A%60%60%60)
 
-```markdown
-´´´javascript
+````markdown
+```javascript
 console.log("Hello World!")
-´´´
 ```
+````
 
 ## Tablas
 
