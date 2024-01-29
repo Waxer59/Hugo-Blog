@@ -11,7 +11,8 @@
     "tw:watch": "npx tailwindcss -i ./main.css -o ./assets/styles/style.css --watch",
     "lint": "eslint \"*.{js,hmtl,md}\" --fix",
     "format": "prettier --write \"./**/*.{js,md,html,css}\"",
-    "algolia:update": "node ./scripts/read-rss-and-send-to-algolia"
+    "algolia:update": "node ./scripts/read-rss-and-send-to-algolia",
+    "prepare": "husky install"
   },
   "keywords": [],
   "author": "",
