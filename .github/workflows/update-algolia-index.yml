@@ -12,7 +12,7 @@ jobs:
         uses: actions/checkout@v2
       
       - name: Install deps
-        run: pnpm --frozen-lockfile
+        run: pnpm install --frozen-lockfile
 
       - name: Build the site
         run: pnpm build
