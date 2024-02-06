@@ -3,8 +3,9 @@ module.exports = {
   important: true,
   darkMode: 'class',
   content: [
-    '*.md',
-    '*.html',
+    'content/**/*.md',
+    'layouts/**/*.html',
+    'assets/js/*.js',
     './node_modules/flowbite/**/*.js'
   ],
   theme: {
