@@ -1,4 +1,4 @@
-# Wadev Blog
+# Hugo Blog
 
 This is my personal blog where I will post articles about programming and more.
 

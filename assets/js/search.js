@@ -1,6 +1,6 @@
 const ALGOLIA_APPLICATION_ID = 'IQDYVZHSJ1';
 const ALGOLIA_SEARCH_API_KEY = '8c01ff14ce05785074f6c4f038fdcc23';
-const ALGOLIA_INDEX_NAME = 'prod_blog.wadev.dev';
+const ALGOLIA_INDEX_NAME = 'prod_blog.hgo.one';
 const lang = window.location.pathname.replaceAll('/', '') || 'en';
 const timeout = 1000;
 const searchPlaceholder = lang === 'es' ? 'Buscar...' : 'Search...';
@@ -15,7 +15,7 @@ const algoliaClient = algoliasearch(
 let timerId;
 
 const search = instantsearch({
-  indexName: 'prod_blog.wadev.dev',
+  indexName: ALGOLIA_INDEX_NAME,
   searchClient: algoliaClient,
   searchFunction(helper) {
     const hits = document.querySelector('#hits');

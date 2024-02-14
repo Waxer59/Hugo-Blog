@@ -1,13 +1,13 @@
 baseURL = '/'
 languageCode = 'en-us'
-title = 'Wadev - Blog'
+title = 'Hugo - Blog'
 defaultContentLanguage = "en"
 enableRobotsTXT = true
 paginate = 10
 
 [params]
-  author = "Wadev"
-  description = "Hi! im Wadev and this is my blog"
+  author = "Hugo"
+  description = "Hi! im Hugo and this is my blog"
 
 [permalinks]
   posts = "/:filename/"
