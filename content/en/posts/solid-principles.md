@@ -202,10 +202,10 @@ that this substitution negatively alters the operation of the system, that is to
 
 #### ✅ Following the LSP
 
-Suppose a class **Animal** with a **sound()** method and that this method returns the sound that animal makes.
+Suppose an abstract class **Animal** with a **sound()** method and that this method returns the sound that animal makes.
 
 ```typescript
-class Animal {
+abstract class Animal {
   sound() {
     return "Make a sound";
   }
@@ -234,7 +234,7 @@ Now suppose we implement a class called **SilentAnimal** that does not emit any 
 we would not be able to interchange the class of **SilentAnimal** with the instance of **Animal**.
 
 ```typescript
-class Animal {
+abstract class Animal {
   sound() {
     return "Make a sound";
   }
@@ -249,7 +249,7 @@ To fix this new class we could simply implement the **sound()** method inside th
 empty string.
 
 ```typescript
-class Animal {
+abstract class Animal {
   sound() {
     return "Make a sound";
   }

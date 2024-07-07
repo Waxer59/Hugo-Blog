@@ -202,10 +202,10 @@ que esta sustitución altere negativamente el funcionamiento del sistema, es dec
 
 #### ✅ Siguiendo el LSP
 
-Supongamos una clase **Animal** con un método **sound()** y que dicho método retorne el sonido que hace dicho animal.
+Supongamos una clase abstracta **Animal** con un método **sound()** y que dicho método retorne el sonido que hace dicho animal.
 
 ```typescript
-class Animal {
+abstract class Animal {
   sound() {
     return "Make a sound";
   }
@@ -234,7 +234,7 @@ Ahora supongamos que implementamos una clase llamada **SilentAnimal** que no emi
 no podríamos intercambiar la clase de **SilentAnimal** con la instancia de **Animal**
 
 ```typescript
-class Animal {
+abstract class Animal {
   sound() {
     return "Make a sound";
   }
@@ -249,7 +249,7 @@ Para arreglar esta nueva clase simplemente podríamos implementar el método **s
 cadena vacía.
 
 ```typescript
-class Animal {
+abstract class Animal {
   sound() {
     return "Make a sound";
   }
